@@ -32,10 +32,9 @@ const AppCarousel = () => (
                     >
                         <Box height="100%">
                             <ContentBox height="100%" pt={[8, null, 14]} pb={[10, null, 32]}>
-                                <Heading height="100%" bg="rgba(0, 0, 0, 0.5)" as="h1" fontSize={['1xl', null, '4xl', '5xl']} fontWeight={100}>
-                                    <br />
-                                    {storytype.title}
-                                </Heading>
+                                <br />
+                                <div> <Heading height="100%" bg="rgba(0, 0, 0, 0.5)" as="h1" fontSize={['4xl', null, '4xl', '5xl']} fontWeight={100}>{storytype.title}</Heading></div>
+
                             </ContentBox>
                         </Box>
                     </Box>

@@ -19,14 +19,14 @@ const CloseIcon = () => (
   <svg width="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
     <title>Close</title>
     <path
-      fill="white"
+      fill="#55099D"
       d="M9.00023 7.58599L13.9502 2.63599L15.3642 4.04999L10.4142 8.99999L15.3642 13.95L13.9502 15.364L9.00023 10.414L4.05023 15.364L2.63623 13.95L7.58623 8.99999L2.63623 4.04999L4.05023 2.63599L9.00023 7.58599Z"
     />
   </svg>
 )
 
 const MenuIcon = () => (
-  <svg width="24px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="white">
+  <svg width="24px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="#55099D">
     <title>Menu</title>
     <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
   </svg>
@@ -66,22 +66,22 @@ const MenuLinks = ({ isOpen }: MenuLinksProps) => {
         <MenuItem to="/new">Share your story</MenuItem>
         <MenuItem to="/about">About Us</MenuItem>
         <MenuItem to="/faq">FAQ</MenuItem>
-        <MenuItem to="https://kvmhxg5ojy6.typeform.com/to/gUsoYkft" externalLink={true}>
+        <MenuItem to="https://kvmhxg5ojy6.typeform.com/" externalLink={true}>
           Media
         </MenuItem>
 
         {/* Icons */}
-        <MenuItem to="https://twitter.com/MyCOVIDStory_CA" externalLink={true}>
+        <MenuItem to="https://twitter.com/MyCovidTime_IN" externalLink={true}>
           <TwitterSVG />
-          <VisuallyHidden>Twitter @MyCOVIDStory_CA</VisuallyHidden>
+          <VisuallyHidden>Twitter @MyCovidTime_IN</VisuallyHidden>
         </MenuItem>
-        <MenuItem to="https://www.facebook.com/MyCovidStoryCA" externalLink={true}>
+        <MenuItem to="https://www.facebook.com/MyCovidTime_IN" externalLink={true}>
           <FacebookSVG />
-          <VisuallyHidden>Facebook @MyCovidStoryCA</VisuallyHidden>
+          <VisuallyHidden>Facebook @MyCovidTime_IN</VisuallyHidden>
         </MenuItem>
-        <MenuItem to="https://www.instagram.com/mycovidstory_ca/" externalLink={true}>
+        <MenuItem to="https://www.instagram.com/MyCovidTime_IN/" externalLink={true}>
           <InstagramSVG />
-          <VisuallyHidden>Instagram @mycovidstory_ca</VisuallyHidden>
+          <VisuallyHidden>Instagram @MyCovidTime_IN</VisuallyHidden>
         </MenuItem>
 
         <MenuItem to="/new">

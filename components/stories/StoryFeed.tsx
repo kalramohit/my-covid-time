@@ -4,11 +4,11 @@ import { categoryLabel, storyCategoryLabel, storyImage, storyCite } from './mode
 import ContentBox from '../common/ContentBox'
 import Label from '../common/Label'
 import { Story } from '@prisma/client'
-
+import { StoryThumnbnail } from './model'
 
 
 interface StorySummaryProps {
-  story: Story
+  story: StoryThumnbnail
 }
 
 function StorySummary({ story }: StorySummaryProps) {
@@ -19,23 +19,16 @@ function StorySummary({ story }: StorySummaryProps) {
       <NextLink href={`${href}?back=true`} as={href}>
         <Link _hover={{ textDecoration: 'none' }}>
           <Box
+            height="200px"
             borderRadius="8px"
-
+            bgImage={`url(${story.url})`}
             bgSize="cover"
             bgPosition="center"
             color="white"
           >
             <Box p={[4, null, null, 6]} borderRadius="8px" >
               <Flex>
-                {story.contentWarning ? (
-                  <Label color="#C01313" backgroundColor="white">
-                    Warning: Sensitive Content
-                  </Label>
-                ) : (
-                  <Label visibility={categoryLabel[story.category] ? 'visible' : 'hidden'}>
-                    {storyCategoryLabel(story)}
-                  </Label>
-                )}
+
               </Flex>
               <Box minH="6em" my={[4, null, null, 6]}>
                 <Heading
@@ -52,7 +45,7 @@ function StorySummary({ story }: StorySummaryProps) {
                   {story.title}
                 </Heading>
               </Box>
-              <Box lineHeight={1.2}>{story.title}</Box>
+              <Box lineHeight={1.2}>{story.author}</Box>
             </Box>
           </Box>
 
@@ -64,7 +57,7 @@ function StorySummary({ story }: StorySummaryProps) {
 
 interface StoryFeedProps {
   storytype: string
-  stories: Story[]
+  stories: StoryThumnbnail[]
 }
 
 export default function StoryFeed({ storytype, stories }: StoryFeedProps) {

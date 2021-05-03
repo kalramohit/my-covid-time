@@ -7,7 +7,8 @@ import AppCarousel from '../components/common/banner'
 import StoryFeed from '../components/stories/StoryFeed'
 import FloatingRibbon, { Button } from '../components/common/FloatingRibbon'
 import SiteLayout from '../layouts/Default'
-import { Story } from '@prisma/client'
+import { StoryThumnbnail } from '../components/stories/model'
+import { Prisma, Story } from '@prisma/client'
 import { ReactNode } from 'react'
 import HeadTags from '../components/common/HeadTags'
 
@@ -20,13 +21,13 @@ function FeedHeader() {
   )
 }
 interface MainPageProps {
-  healthcarestories: Story[],
-  leadershipstories: Story[],
-  frontlinestories: Story[],
-  commoncitizensstories: Story[],
-  supremesacrifiessstories: Story[],
-  myowncovidstories: Story[],
-  lifeaftercovidstories: Story[]
+  healthcarestories: StoryThumnbnail[],
+  leadershipstories: StoryThumnbnail[],
+  frontlinestories: StoryThumnbnail[],
+  commoncitizensstories: StoryThumnbnail[],
+  supremesacrifiessstories: StoryThumnbnail[],
+  myowncovidstories: StoryThumnbnail[],
+  lifeaftercovidstories: StoryThumnbnail[]
 }
 
 const MainPage = ({
@@ -85,38 +86,52 @@ export async function getStaticProps({ preview = null, previewData = {} }) {
     ...(ref ? { ref } : null)
   })
 
-  const healthcarestories = allPosts.results.filter(function (el) {
-    return el.data.storytype == "Healthcare Warriors";
+  const seedData: StoryThumnbnail[] = []
+
+  for (let i = 0; i < allPosts.results.length; i++) {
+    const seed = {
+      title: allPosts.results[i].data.title[0].text,
+      id: allPosts.results[i].uid,
+      url: allPosts.results[i].data.thumbnail[0].url,
+      storytype: allPosts.results[i].data.storytype,
+      contentWarning: false,
+      author: allPosts.results[i].data.author
+    }
+    seedData.push(seed)
+  }
+
+  const healthcarestories = seedData.filter(function (el) {
+    return el.storytype == "Healthcare Warriors";
   }
   );
 
-  const frontlinestories = allPosts.results.filter(function (el) {
-    return el.data.storytype == "Frontline Workers";
+  const frontlinestories = seedData.filter(function (el) {
+    return el.storytype == "Frontline Workers";
   }
   );
 
-  const commoncitizensstories = allPosts.results.filter(function (el) {
-    return el.data.storytype == "Concerned Citizen contribution";
+  const commoncitizensstories = seedData.filter(function (el) {
+    return el.storytype == "Concerned Citizen contribution";
   }
   );
 
-  const supremesacrifiessstories = allPosts.results.filter(function (el) {
-    return el.data.storytype == "Supreme Sacrifices";
+  const supremesacrifiessstories = seedData.filter(function (el) {
+    return el.storytype == "Supreme Sacrifices";
   }
   );
 
-  const leadershipstories = allPosts.results.filter(function (el) {
-    return el.data.storytype == "Leadership Examples";
+  const leadershipstories = seedData.filter(function (el) {
+    return el.storytype == "Leadership Examples";
   }
   );
 
 
-  const myowncovidstories = allPosts.results.filter(function (el) {
-    return el.data.storytype == "My Own Covid Story";
+  const myowncovidstories = seedData.filter(function (el) {
+    return el.storytype == "My Own Covid Story";
   }
   );
-  const lifeaftercovidstories = allPosts.results.filter(function (el) {
-    return el.data.storytype == "Life Changes Post Covid";
+  const lifeaftercovidstories = seedData.filter(function (el) {
+    return el.storytype == "Life Changes Post Covid";
   }
   );
 

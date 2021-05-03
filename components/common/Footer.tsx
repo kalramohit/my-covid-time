@@ -36,7 +36,7 @@ export default function Footer() {
           </MenuItem>
           {/*<MenuItem padding={1} marginBottom={1}>Releases</MenuItem>*/}
           <MenuItem
-            to="https://github.com/my-covid-time/www"
+            to="https://github.com/kalramohit/my-covid-time"
             externalLink={true}
             padding={1}
             marginBottom={1}
@@ -44,7 +44,7 @@ export default function Footer() {
             Open Source Project
           </MenuItem>
           <MenuItem
-            to="https://app.usefathom.com/share/xnknpyhv/mycovidstory.ca"
+            to="https://app.usefathom.com/share/xnknpyhv/mycovidtime.in"
             externalLink={true}
             padding={1}
             marginBottom={1}
@@ -56,7 +56,7 @@ export default function Footer() {
           </MenuItem>
         </SimpleGrid>
         <Text as="strong" paddingTop={4} mb={4}>
-          Dedicated to Covid Warriors{' '}
+          Dedicated to Covid Warriers{' '}
           <span role="img" aria-label="heart" style={{ filter: 'brightness(0) invert(1)' }}>
             ❤️
           </span>

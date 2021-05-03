@@ -1,5 +1,14 @@
 import { Story } from '@prisma/client'
 
+export type StoryThumnbnail = {
+  id: string
+  storytype: string | null
+  title: string
+  url: string | null
+  contentWarning: boolean
+  author: string
+}
+
 export const storyTypeLabel = {
   'sacrificing': 'Sacrificing',
   'great-leadership': 'Setting Leadership Example',
