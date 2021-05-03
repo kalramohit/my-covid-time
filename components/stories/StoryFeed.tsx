@@ -12,7 +12,7 @@ interface StorySummaryProps {
 }
 
 function StorySummary({ story }: StorySummaryProps) {
-  const href = `/story/${story.uid}`
+  const href = `/story/${story.id}`
 
   return (
     <Box as="article">
@@ -20,7 +20,7 @@ function StorySummary({ story }: StorySummaryProps) {
         <Link _hover={{ textDecoration: 'none' }}>
           <Box
             borderRadius="8px"
-            bgImage={`url(${story.data.thumbnail[0].url})`}
+
             bgSize="cover"
             bgPosition="center"
             color="white"
@@ -49,10 +49,10 @@ function StorySummary({ story }: StorySummaryProps) {
                   bg="rgba(0, 0, 0, 0.5)"
                 >
 
-                  {story.data.title[0].text}
+                  {story.title}
                 </Heading>
               </Box>
-              <Box lineHeight={1.2}>{story.data.author}</Box>
+              <Box lineHeight={1.2}>{story.title}</Box>
             </Box>
           </Box>
 
@@ -63,6 +63,7 @@ function StorySummary({ story }: StorySummaryProps) {
 }
 
 interface StoryFeedProps {
+  storytype: string
   stories: Story[]
 }
 

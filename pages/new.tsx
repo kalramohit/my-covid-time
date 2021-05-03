@@ -27,12 +27,12 @@ export default function CreateStory() {
           <br />
           You may also share stories about  healthcare warriors, frontline workers, colleagues , neighbours, workspace or anyone who you believe has done something inspirational , motivating or shown the true leadership.
         </Text>
-        <Text fontWeight="bold" color="#333">
+        <Text fontWeight="bold" >
         <br />
           This is an open invitation to all of you to share your stories or stories known to you and inspire us all. We will publish your story after doing validation and formatting.
         </Text>
         <Text pt={4} pb={2} >
-        Please read our <span style={{fontWeight:"bold"}}><Link color="#55099D" href="/faq">FAQ</Link></span> for validation process.
+        Please read our <span style={{fontWeight:"bold"}}><Link  href="/faq">FAQ</Link></span> for validation process.
         </Text>
         <StoryForm />
       </ContentBox>

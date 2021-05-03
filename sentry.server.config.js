@@ -8,7 +8,7 @@ import { Integrations } from '@sentry/tracing'
 const SENTRY_DSN = process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN
 
 Sentry.init({
-  dsn: SENTRY_DSN || 'https://ff771404287542638b24e14b8de8edff@o573965.ingest.sentry.io/5724646',
+  dsn: SENTRY_DSN || 'https://49c4c91328494c34b865f1db3a5691a3@o609569.ingest.sentry.io/5747213',
 
   // Note: if you want to override the automatic release value, do not set a
   // `release` value here - use the environment variable `SENTRY_RELEASE`, so

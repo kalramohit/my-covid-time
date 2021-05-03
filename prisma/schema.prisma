@@ -18,6 +18,7 @@ model Story {
   title          String
   content        String
   postal         String
+  url            String?
   category       String
   contactName    String?
   displayName    String?

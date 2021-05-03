@@ -77,14 +77,8 @@ const MainPage = ({
 
 export async function getStaticProps({ preview = null, previewData = {} }) {
 
-  const { ref } = previewData
-  const { ref1 } = previewData
-
   const client = Client()
-
-  const doc = await client.getSingle("blog_home", ref ? { ref } : null) || {}
-
-
+  const ref = undefined
   const allPosts = await client.query(
     Prismic.Predicates.at("document.type", "post"), {
     orderings: "[my.post.date desc]",
