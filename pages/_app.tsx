@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }: MyAppProps) {
   const router = useRouter()
 
   useEffect(() => {
-    Fathom.load('XNKNPYHV', {
+    Fathom.load('abc', {
       includedDomains: ['www.MyCovidTime.in'],
     })
 
@@ -49,7 +49,7 @@ function MyApp({ Component, pageProps }: MyAppProps) {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'My COVID Story',
+    name: 'My Covid Time',
     alternateName: 'MyCovidTime.in',
     url: process.env.BASE_URL,
     logo: '/img/logo.jpg',
@@ -67,7 +67,7 @@ function MyApp({ Component, pageProps }: MyAppProps) {
       <Head>
         <link key="favicon" rel="icon" href="/favicon.ico" />
         <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content="@MyCOVIDStory_CA" />
+        <meta name="twitter:creator" content="@MyCOVIDTime_In" />
         <meta property="og:type" content="website" />
 
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
