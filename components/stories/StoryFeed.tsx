@@ -19,7 +19,7 @@ function StorySummary({ story }: StorySummaryProps) {
       <NextLink href={`${href}?back=true`} as={href}>
         <Link _hover={{ textDecoration: 'none' }}>
           <Box
-
+            height="200px"
             borderRadius="8px"
             bgImage={`url(${story.url})`}
             bgSize="cover"
