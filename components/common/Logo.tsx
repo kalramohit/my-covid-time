@@ -6,7 +6,7 @@ import ContentBox from '../common/ContentBox'
 import Link from 'next/link'
 
 export default function Logo({ ...props }: BoxProps) {
-  const logourl = '/img/logonew.jpg?fmt=jpg'
+  const logourl = 'https://images.prismic.io/sample-poc2/aac5d3ef-a947-44e6-8277-7a5dc8b3767a_logonew.jpg?auto=compress,format&rect=0,9,58,58&w=140&h=140'
   return (
     <Box {...props} >
       <Flex>
