@@ -18,7 +18,7 @@ export default function MenuItem({
 }: MenuItemProps) {
   return (
     <NextLink href={to} passHref>
-      <Link isExternal={externalLink} {...props}>
+      <Link fontSize="large" isExternal={externalLink} {...props}>
         {children}
       </Link>
     </NextLink>
