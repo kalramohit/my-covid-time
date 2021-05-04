@@ -85,7 +85,7 @@ export default function FAQ() {
             have access to any personally identifiable information. We take your privacy seriously
             and have taken this into consideration at every step. This site does not use cookies or
             any third-party tracking tools. We use{' '}
-            <Link href="https://app.usefathom.com/share/xnknpyhv/MyCovidTime.in#/" isExternal>
+            <Link href="https://app.usefathom.com/share/RVQXQDGO/MyCovidTime.in#/" isExternal>
               Fathom
             </Link>{' '}
             to generate simple traffic metrics. Fathom does not track any personally identifiable

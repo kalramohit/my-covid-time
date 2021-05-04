@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }: MyAppProps) {
 
   useEffect(() => {
     Fathom.load('RVQXQDGO', {
-      includedDomains: ['www.MyCovidTime.in'],
+      includedDomains: ['www.MyCovidTime.in', 'my-covid-time.vercel.app', 'localhost:3000'],
     })
 
     function onRouteChangeComplete(): void {

@@ -3,7 +3,7 @@ import Head from 'next/head'
 const defaultTitle = 'The Stories of COVID-19 in India'
 const defaultDescription =
   "Because we believe numbers do not not tell individual stories of hope, resilience and inspiration during the coronavirus pandemic."
-const defaultPreviewImage = `img/landingpage-v2.jpg`
+const defaultPreviewImage = generatePreviewImageUrl(`img/landingpage-v2.jpg`)
 
 interface HeadTagsProps {
   title?: string
@@ -12,7 +12,7 @@ interface HeadTagsProps {
   children?: React.ReactNode
 }
 
-const TITLE_SUFFIX = 'MyCOVIDTime.in'
+const TITLE_SUFFIX = 'MyCovidTime.in'
 const DESCRIPTION_LENGTH = 170
 
 export default function HeadTags({
@@ -23,7 +23,7 @@ export default function HeadTags({
 }: HeadTagsProps) {
   const generatedTitle = generateTitle(title, TITLE_SUFFIX)
   const generatedDescription = generateDescription(description, DESCRIPTION_LENGTH)
-  const generatedPreviewImage = generatePreviewImageUrl(previewImage)
+  const generatedPreviewImage = previewImage
 
   return (
     <Head>
@@ -38,6 +38,9 @@ export default function HeadTags({
       <meta key="twitter:description" name="twitter:description" content={generatedDescription} />
       <meta key="twitter:image" name="twitter:image" content={generatedPreviewImage} />
       {children}
+
+      <script src="https://cdn.usefathom.com/script.js" data-site="RVQXQDGO" defer></script>
+
     </Head>
   )
 }
