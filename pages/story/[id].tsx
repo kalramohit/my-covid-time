@@ -115,7 +115,7 @@ export default function StoryPage(props): JSX.Element {
     const description = title
     return (
       <>
-        <HeadTags title="{title}" description="{description}" previewImage="{story.data.thumbnail[0].url}" />
+        <HeadTags title={title} description={description} previewImage={story.data.thumbnail[0].url} />
         <Box>
           <StoryDetail story={story} onClose={handleClose} onShare={onOpen} />
         </Box>
