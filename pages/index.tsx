@@ -58,17 +58,17 @@ const MainPage = ({
               Around the India their are so many stories of hope, resilience, and inspiration during this time.
               It's an attempt to show gratitude and respect of their efforts and also motivate fellow citizens to remain positive at this difficult time and contribute to society in their best possible way.
               <br /><br />
-              Need of the hour is to read ,share and contribute stories of positivity, motivation and survivals.
+              Need of the hour is to read ,share and contribute stories of positivity, motivation and survivals. This could be one of the way to give tribute to those we have lost in the battle.
           </Text>
           </Box>
         </ContentBox>
-        <StoryFeed storytype='Supreme Sacrifices' stories={supremesacrifiessstories} />
-        <StoryFeed storytype='Healthcare Warriers' stories={healthcarestories} />
-        <StoryFeed storytype='Frontline Warriers' stories={frontlinestories} />
-        <StoryFeed storytype='Concerned Citizens' stories={commoncitizensstories} />
-        <StoryFeed storytype='Leadership Examples' stories={leadershipstories} />
-        <StoryFeed storytype='My Own Covid Story' stories={myowncovidstories} />
-        <StoryFeed storytype='Life Changes Post Covid' stories={lifeaftercovidstories} />
+        <StoryFeed storytitle="We all will always remain indebted to those who sacrificed their life in line of duty during pendemic.Their sacrifice reflects their commitment towards humankind." storytype='Supreme Sacrifices' stories={supremesacrifiessstories} />
+        <StoryFeed storytitle="We salute and thank you greatly for all the incredible work you've been doing out there in the battlefied.You are saving our lives." storytype='Healthcare Warriers' stories={healthcarestories} />
+        <StoryFeed storytitle="We are thankful to your constant support and showing resilience during this difficult time." storytype='Frontline Warriers' stories={frontlinestories} />
+        <StoryFeed storytitle="Every small contributions make this world a better place. Thanks for providing an extra hand of support." storytype='Concerned Citizens' stories={commoncitizensstories} />
+        <StoryFeed storytitle="Your leadership and support will always be in our memories." storytype='Leadership Examples' stories={leadershipstories} />
+        <StoryFeed storytitle="Your leadership and support will always be in our memories." storytype='My Own Covid Story' stories={myowncovidstories} />
+        <StoryFeed storytitle="Your leadership and support will always be in our memories." storytype='Life Changes Post Covid' stories={lifeaftercovidstories} />
 
       </Box>
 
