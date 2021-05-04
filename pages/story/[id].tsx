@@ -65,37 +65,6 @@ const shareIconSize = 64
 const buttonStyle: CSSProperties = { marginRight: '12px', marginBottom: '12px' }
 
 
-/**
- * Post page component
- */
-const Post = ({ post }) => {
-  if (post && post.data) {
-    const hasTitle = RichText.asText(post.data.title).length !== 0;
-    const title = hasTitle ? RichText.asText(post.data.title) : "Untitled";
-
-    return (
-      <div>
-        <Head>
-          <title>{title}</title>
-        </Head>
-        <div className="main">
-          <Box>
-            <StoryDetail story={story} onClose={handleClose} onShare={onOpen} />
-          </Box>
-
-          <div className="outer-container">
-            <BackButton />
-            <h1>{title}</h1>
-          </div>
-          <SliceZone sliceZone={post.data.body} />
-        </div>
-
-      </div>
-    );
-  }
-
-  return null;
-};
 export default function StoryPage(props): JSX.Element {
   const router = useRouter()
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -132,68 +101,73 @@ export default function StoryPage(props): JSX.Element {
   // Get Story details
   const description = "test"
   const emailSubject = 'Help me amplify this story'
+  if (story && story.data) {
+    const hasTitle = RichText.asText(story.data.title).length !== 0;
+    const title = hasTitle ? RichText.asText(story.data.title) : "Untitled";
+    return (
 
-  return (
-    <>
-      <HeadTags title={story.title} description={story.content} previewImage={storyImage(story)} />
-      <Box>
-        <StoryDetail story={story} onClose={handleClose} onShare={onOpen} />
-      </Box>
-      <Box margin="5">
-        <SliceZone sliceZone={story.data.body} />
-        <br />
-      </Box>
-      <style jsx global>
-        {postStyles}
-      </style>
-      <FloatingRibbon>
-        <Button onClick={onOpen} my={"5px"}>
-          Share This Story
-        </Button>
-        <Drawer placement="bottom" onClose={onClose} isOpen={isOpen}>
-          <DrawerOverlay>
-            <DrawerContent>
-              <DrawerHeader>Share via</DrawerHeader>
+      <>
+        <HeadTags title={title} />
+        <Box>
+          <StoryDetail story={story} onClose={handleClose} onShare={onOpen} />
+        </Box>
+        <Box margin="5">
+          <SliceZone sliceZone={story.data.body} />
+          <br />
+        </Box>
+        <style jsx global>
+          {postStyles}
+        </style>
+        <FloatingRibbon>
+          <Button onClick={onOpen} my={"5px"}>
+            Share This Story
+                </Button>
+          <Drawer placement="bottom" onClose={onClose} isOpen={isOpen}>
+            <DrawerOverlay>
+              <DrawerContent>
+                <DrawerHeader>Share via</DrawerHeader>
 
-              <DrawerBody>
-                <Flex alignItems="flex-start" flexWrap="wrap">
-                  <TwitterShareButton
-                    url={url}
-                    title={description}
-                    via="MyCOVIDStory_IN"
-                    style={buttonStyle}
-                  >
-                    <TwitterIcon size={shareIconSize} />
-                  </TwitterShareButton>
+                <DrawerBody>
+                  <Flex alignItems="flex-start" flexWrap="wrap">
+                    <TwitterShareButton
+                      url={url}
+                      title={description}
+                      via="MyCOVIDStory_IN"
+                      style={buttonStyle}
+                    >
+                      <TwitterIcon size={shareIconSize} />
+                    </TwitterShareButton>
 
-                  <FacebookShareButton url={url} quote={description} style={buttonStyle}>
-                    <FacebookIcon size={shareIconSize} />
-                  </FacebookShareButton>
+                    <FacebookShareButton url={url} quote={description} style={buttonStyle}>
+                      <FacebookIcon size={shareIconSize} />
+                    </FacebookShareButton>
 
-                  <WhatsappShareButton url={url} title={description} style={buttonStyle}>
-                    <WhatsappIcon size={shareIconSize} />
-                  </WhatsappShareButton>
+                    <WhatsappShareButton url={url} title={description} style={buttonStyle}>
+                      <WhatsappIcon size={shareIconSize} />
+                    </WhatsappShareButton>
 
-                  <EmailShareButton
-                    url={url}
-                    subject={emailSubject}
-                    body={description}
-                    style={buttonStyle}
-                  >
-                    <EmailIcon size={shareIconSize} />
-                  </EmailShareButton>
+                    <EmailShareButton
+                      url={url}
+                      subject={emailSubject}
+                      body={description}
+                      style={buttonStyle}
+                    >
+                      <EmailIcon size={shareIconSize} />
+                    </EmailShareButton>
 
-                  <CustomShareContainer style={buttonStyle} onClick={handleURLCopy}>
-                    <LinkIcon color="#fff" w={8} h={8} />
-                  </CustomShareContainer>
-                </Flex>
-              </DrawerBody>
-            </DrawerContent>
-          </DrawerOverlay>
-        </Drawer>
-      </FloatingRibbon>
-    </>
-  )
+                    <CustomShareContainer style={buttonStyle} onClick={handleURLCopy}>
+                      <LinkIcon color="#fff" w={8} h={8} />
+                    </CustomShareContainer>
+                  </Flex>
+                </DrawerBody>
+              </DrawerContent>
+            </DrawerOverlay>
+          </Drawer>
+        </FloatingRibbon>
+      </>
+    )
+  }
+  return null;
 }
 
 // Return the latest story IDs to pre-render those pages on the server with getStaticProps().
