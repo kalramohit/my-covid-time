@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }: MyAppProps) {
   const router = useRouter()
 
   useEffect(() => {
-    Fathom.load('abc', {
+    Fathom.load('RVQXQDGO', {
       includedDomains: ['www.MyCovidTime.in'],
     })
 

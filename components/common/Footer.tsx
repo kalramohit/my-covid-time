@@ -44,7 +44,7 @@ export default function Footer() {
             Open Source Project
           </MenuItem>
           <MenuItem
-            to="https://app.usefathom.com/share/xnknpyhv/mycovidtime.in"
+            to="https://app.usefathom.com/share/RVQXQDGO/mycovidtime.in"
             externalLink={true}
             padding={1}
             marginBottom={1}
