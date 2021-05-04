@@ -67,7 +67,7 @@ export default function StoryFeed({ storytitle, storytype, stories }: StoryFeedP
     <Box>
 
       <ContentBox>
-        <Heading as="h2" mb={[6, null, 8]} color="#55099D">
+        <Heading as="h2" mb={[6, null, 8]} color="#044279">
           {storytype}
         </Heading>
         <Text>{storytitle}<br /></Text>

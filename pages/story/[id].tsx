@@ -114,7 +114,6 @@ export default function StoryPage(props): JSX.Element {
     const title = hasTitle ? RichText.asText(story.data.title) : "Untitled";
     const description = title
     return (
-
       <>
         <HeadTags title={title} />
         <Box>
@@ -128,14 +127,12 @@ export default function StoryPage(props): JSX.Element {
           {postStyles}
         </style>
         <FloatingRibbon>
-          <Button onClick={onOpen} my={"5px"}>
-            Share This Story
-          </Button>
-          <NextLink href="/new" passHref >
-            <Link >
-              <Button marginLeft="5" my={'5px'}>Add Your Story or Experience</Button>
+          <NextLink href="/new" passHref>
+            <Link>
+              <Text TextAlign="center"><span><b>Click here</b></span> to Inspire and motivate the world with an untold story or experience during the pendemic or may share with the world how it has changed your life</Text>
             </Link>
           </NextLink>
+
           <Drawer placement="bottom" onClose={onClose} isOpen={isOpen}>
             <DrawerOverlay>
               <DrawerContent>
