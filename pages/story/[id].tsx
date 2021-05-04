@@ -1,4 +1,14 @@
 import { useRouter } from 'next/router'
+import { queryRepeatableDocuments } from '../../utils/queries'
+import { Client } from "../../utils/prismicHelpers";
+import { RichText } from "prismic-reactjs";
+import Head from "next/head";
+import { postStyles } from "../../styles/posts";
+import { Heading, IconButton, Stack, Text } from '@chakra-ui/react'
+import { CloseIcon } from '@chakra-ui/icons'
+
+// Project components
+import { BackButton, SliceZone } from "../../components/post";
 
 import {
   Box,
@@ -54,7 +64,39 @@ type StoryPageProps = StoryProps | ErrorCodeProps
 const shareIconSize = 64
 const buttonStyle: CSSProperties = { marginRight: '12px', marginBottom: '12px' }
 
-export default function StoryPage(props: StoryPageProps): JSX.Element {
+
+/**
+ * Post page component
+ */
+const Post = ({ post }) => {
+  if (post && post.data) {
+    const hasTitle = RichText.asText(post.data.title).length !== 0;
+    const title = hasTitle ? RichText.asText(post.data.title) : "Untitled";
+
+    return (
+      <div>
+        <Head>
+          <title>{title}</title>
+        </Head>
+        <div className="main">
+          <Box>
+            <StoryDetail story={story} onClose={handleClose} onShare={onOpen} />
+          </Box>
+
+          <div className="outer-container">
+            <BackButton />
+            <h1>{title}</h1>
+          </div>
+          <SliceZone sliceZone={post.data.body} />
+        </div>
+
+      </div>
+    );
+  }
+
+  return null;
+};
+export default function StoryPage(props): JSX.Element {
   const router = useRouter()
   const { isOpen, onOpen, onClose } = useDisclosure()
   const url = props.success ? `${process.env.BASE_URL}/story/${props.story.id}` : ''
@@ -88,22 +130,26 @@ export default function StoryPage(props: StoryPageProps): JSX.Element {
   }
 
   // Get Story details
-  const description = generateSocial(story)
+  const description = "test"
   const emailSubject = 'Help me amplify this story'
 
   return (
     <>
       <HeadTags title={story.title} description={story.content} previewImage={storyImage(story)} />
-
       <Box>
         <StoryDetail story={story} onClose={handleClose} onShare={onOpen} />
       </Box>
-
+      <Box margin="5">
+        <SliceZone sliceZone={story.data.body} />
+        <br />
+      </Box>
+      <style jsx global>
+        {postStyles}
+      </style>
       <FloatingRibbon>
         <Button onClick={onOpen} my={"5px"}>
           Share This Story
         </Button>
-
         <Drawer placement="bottom" onClose={onClose} isOpen={isOpen}>
           <DrawerOverlay>
             <DrawerContent>
@@ -114,7 +160,7 @@ export default function StoryPage(props: StoryPageProps): JSX.Element {
                   <TwitterShareButton
                     url={url}
                     title={description}
-                    via="MyCOVIDStory_CA"
+                    via="MyCOVIDStory_IN"
                     style={buttonStyle}
                   >
                     <TwitterIcon size={shareIconSize} />
@@ -156,11 +202,10 @@ export default function StoryPage(props: StoryPageProps): JSX.Element {
 // Details: https://nextjs.org/docs/basic-features/data-fetching#getstaticpaths-static-generation
 //
 export async function getStaticPaths() {
-  const stories = await list()
-  const paths = stories.map((s) => ({ params: { id: s.id } }))
+  const documents = await queryRepeatableDocuments((doc) => doc.type === 'post')
   return {
-    paths,
-    fallback: 'blocking',
+    paths: documents.map(doc => `/story/${doc.uid}`),
+    fallback: true,
   }
 }
 
@@ -170,31 +215,14 @@ interface GetStaticProps {
   }
 }
 
-export async function getStaticProps({
-  params,
-}: GetStaticProps): Promise<GetStaticPropsResult<StoryPageProps>> {
-  try {
-    /**
-     * Needed to use `as` keyword, but this should be refactored.
-     */
-    const story = (await get(params.id)) as Story
-
-    return { props: { success: true, story }, revalidate: 60 }
-  } catch (err) {
-    if (err instanceof ResponseError) {
-      return {
-        props: { success: false, errorCode: err.status, errorMessage: err.message },
-        revalidate: 60,
-      }
-    }
-
-    return {
-      props: {
-        success: false,
-        errorCode: 500,
-        errorMessage: "This was an unknown error, we'll try to solve it as soon as possible",
-      },
-      revalidate: 60,
+export async function getStaticProps({ params, preview = null, previewData = {} }) {
+  const ref = undefined
+  const story = await Client().getByUID("post", params.id, ref ? { ref } : null) || {}
+  return {
+    props: {
+      preview,
+      story
     }
   }
 }
+

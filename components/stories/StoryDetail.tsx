@@ -25,16 +25,16 @@ interface StoryDetailProps {
   onShare: () => void
 }
 
-export default function StoryDetail({ story, onClose, onShare }: StoryDetailProps) {
+export default function StoryDetail({ story, onClose, onShare }) {
   return (
     <Box>
-      <Box bgImage={`url(${storyImage(story)})`} bgSize="cover" bgPosition="center" color="white">
+      <Box bgImage={`url(${story.data.thumbnail[0].url})`}
+        bgSize="cover"
+        bgPosition="top"
+        color="white">
         <Box bg="rgba(0, 0, 0, 0.5)">
           <ContentBox>
             <Flex justifyContent="space-between">
-              <Label visibility={categoryLabel[story.category] ? 'visible' : 'hidden'}>
-                {storyCategoryLabel(story)}
-              </Label>
 
               <Flex>
                 <IconButton
@@ -67,10 +67,10 @@ export default function StoryDetail({ story, onClose, onShare }: StoryDetailProp
               _before={{ content: `"“"` }}
               _after={{ content: `"”"` }}
             >
-              {story.title}
+              {story.data.title[0].text}
             </Heading>
             <Box fontSize="md" fontWeight={600} lineHeight={1.2}>
-              From {story.postal}
+              Story about {story.data.author}
             </Box>
           </ContentBox>
         </Box>
@@ -78,13 +78,13 @@ export default function StoryDetail({ story, onClose, onShare }: StoryDetailProp
       <ContentBox>
         {story.contentWarning && <ContentWarningBox />}
         <Heading as="h2" mb={3} fontSize="md" fontWeight={700}>
-          {storyDate(story)}
+
         </Heading>
         <Heading as="h2" mb={4} fontSize="md" fontWeight={700}>
-          {storyName(story)}
+          {story.data.title[0].text}
         </Heading>
-        <Stack spacing={2}>{storyParagraphs(story).map(StoryParagraphs)}</Stack>
+
       </ContentBox>
-    </Box>
+    </Box >
   )
 }
