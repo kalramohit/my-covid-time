@@ -1,10 +1,12 @@
 import { useRouter } from 'next/router'
+import NextLink from 'next/link'
+
 import { queryRepeatableDocuments } from '../../utils/queries'
 import { Client } from "../../utils/prismicHelpers";
 import { RichText } from "prismic-reactjs";
 import Head from "next/head";
 import { postStyles } from "../../styles/posts";
-import { Heading, IconButton, Stack, Text } from '@chakra-ui/react'
+import { Link, Heading, IconButton, Stack, Text } from '@chakra-ui/react'
 import { CloseIcon } from '@chakra-ui/icons'
 
 // Project components
@@ -68,9 +70,10 @@ const buttonStyle: CSSProperties = { marginRight: '12px', marginBottom: '12px' }
 export default function StoryPage(props): JSX.Element {
   const router = useRouter()
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const url = props.success ? `${process.env.BASE_URL}/story/${props.story.id}` : ''
+  const url = true ? `${process.env.BASE_URL}/story/${props.story.uid}` : ''
   const { onCopy } = useClipboard(url)
   const toast = useToast()
+
 
   /**
    * Return the custom error page with the relative status code. This can allow
@@ -99,11 +102,12 @@ export default function StoryPage(props): JSX.Element {
   }
 
   // Get Story details
-  const description = "test"
+
   const emailSubject = 'Help me amplify this story'
   if (story && story.data) {
     const hasTitle = RichText.asText(story.data.title).length !== 0;
     const title = hasTitle ? RichText.asText(story.data.title) : "Untitled";
+    const description = title
     return (
 
       <>
@@ -121,7 +125,12 @@ export default function StoryPage(props): JSX.Element {
         <FloatingRibbon>
           <Button onClick={onOpen} my={"5px"}>
             Share This Story
-                </Button>
+          </Button>
+          <NextLink href="/new" passHref >
+            <Link >
+              <Button marginLeft="5" my={'5px'}>Add Your Story or Experience</Button>
+            </Link>
+          </NextLink>
           <Drawer placement="bottom" onClose={onClose} isOpen={isOpen}>
             <DrawerOverlay>
               <DrawerContent>
@@ -132,7 +141,7 @@ export default function StoryPage(props): JSX.Element {
                     <TwitterShareButton
                       url={url}
                       title={description}
-                      via="MyCOVIDStory_IN"
+                      via="MyCovidTime_IN"
                       style={buttonStyle}
                     >
                       <TwitterIcon size={shareIconSize} />

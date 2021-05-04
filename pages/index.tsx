@@ -1,5 +1,5 @@
 import NextLink from 'next/link'
-import { Box, Flex, Heading, Link, SimpleGrid, Text } from '@chakra-ui/react'
+import { Box, Center, Flex, Heading, Link, SimpleGrid, Text } from '@chakra-ui/react'
 import ContentBox from '../components/common/ContentBox'
 
 import { list, listwithstorytype } from '../lib/api/stories'
@@ -52,26 +52,33 @@ const MainPage = ({
         </Heading>
           <Box pb={6}>
             <Heading as="h2" size="l" pb={3}>
-              Doctors, nurses, front line workers,leaderships,volunteers, common man and all other  are working around the clock to provide life-saving care to patients affected by COVID-19.
+              Doctors, nurses, front line workers, leaders, volunteers, common men and many others are working round the clock to provide life-saving care to patients affected by COVID-19.
           </Heading>
             <Text>
-              Around the India their are so many stories of hope, resilience, and inspiration during this time.
-              It's an attempt to show gratitude and respect of their efforts and also motivate fellow citizens to remain positive at this difficult time and contribute to society in their best possible way.
-              <br /><br />
-              Need of the hour is to read ,share and contribute stories of positivity, motivation and survivals. This could be one of the way to give tribute to those we have lost in the battle.
+              In India there are many stories of hope, resilience, and inspiration displayed by the healthcare workers during pandemic. It's an attempt to show gratitude and respect for their efforts and also motivate fellow citizens to not lose hope and contribute towards the society in any way.
+            <br /><br />
+            Need of the hour is to read, share and contribute stories of positivity, motivation and survivals. It is a humble endeavor to applaud the relentless efforts of the frontline staff and pay tribute to those whom we lost during the crisis.
+
           </Text>
           </Box>
         </ContentBox>
-        <StoryFeed storytitle="We all will always remain indebted to those who sacrificed their life in line of duty during pendemic.Their sacrifice reflects their commitment towards humankind." storytype='Supreme Sacrifices' stories={supremesacrifiessstories} />
-        <StoryFeed storytitle="We salute and thank you greatly for all the incredible work you've been doing out there in the battlefied.You are saving our lives." storytype='Healthcare Warriers' stories={healthcarestories} />
-        <StoryFeed storytitle="We are thankful to your constant support and showing resilience during this difficult time." storytype='Frontline Warriers' stories={frontlinestories} />
-        <StoryFeed storytitle="Every small contributions make this world a better place. Thanks for providing an extra hand of support." storytype='Concerned Citizens' stories={commoncitizensstories} />
-        <StoryFeed storytitle="Your leadership and support will always be in our memories." storytype='Leadership Examples' stories={leadershipstories} />
-        <StoryFeed storytitle="Your leadership and support will always be in our memories." storytype='My Own Covid Story' stories={myowncovidstories} />
-        <StoryFeed storytitle="Your leadership and support will always be in our memories." storytype='Life Changes Post Covid' stories={lifeaftercovidstories} />
+        <StoryFeed storytitle="We all will always remain indebted to those who sacrificed their lives in line of duty during pandemic. Their sacrifice reflects their commitment towards humankind." storytype='Supreme Sacrifices' stories={supremesacrifiessstories} />
+        <StoryFeed storytitle="We salute and appreciate the Doctors, Nurses and Care-Givers, for demonstrating courage, compassion and selflessness, unlike anything we’ve seen." storytype='Healthcare Warriors' stories={healthcarestories} />
+        <StoryFeed storytitle="Your dedication, commitment and selfless service during these troubled times is humbling. You are our everyday heroes." storytype='Frontline Warriors' stories={frontlinestories} />
+        <StoryFeed storytitle="No battle is won alone! We are proud of those kind and gentle citizens who volunteered a helping hand during the unprecedented times. Every small contribution makes the world a better place." storytype='Concerned Citizens' stories={commoncitizensstories} />
+        <StoryFeed storytitle="We appreciate the great visionaries for navigating  recovery during the pandemic with decision and initiatives bound with optimism, deliberate calmness, empathy and care." storytype='Leadership Examples' stories={leadershipstories} />
+        <StoryFeed storytitle="We all have gone though this tough time and have some story to tell." storytype='My Own Covid Story' stories={myowncovidstories} />
+        <StoryFeed storytitle="This has changed my life forever." storytype='Life Changes Post Covid' stories={lifeaftercovidstories} />
 
       </Box>
+      <FloatingRibbon>
 
+        <NextLink href="/new" passHref>
+          <Link>
+            <Text textAlign="center "><span><b>Click here</b></span> to Inspire and motivate the world with an untold story or experience during the pendemic or may share with the world how it has changed your life</Text>
+          </Link>
+        </NextLink>
+      </FloatingRibbon>
     </>
   )
 }

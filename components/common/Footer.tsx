@@ -56,7 +56,7 @@ export default function Footer() {
           </MenuItem>
         </SimpleGrid>
         <Text as="strong" paddingTop={4} mb={4}>
-          Dedicated to Covid Warriers{' '}
+          Dedicated to Covid Warriors{' '}
           <span role="img" aria-label="heart" style={{ filter: 'brightness(0) invert(1)' }}>
             ❤️
           </span>
