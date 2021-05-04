@@ -6,7 +6,7 @@ import ContentBox from '../common/ContentBox'
 import Link from 'next/link'
 
 export default function Logo({ ...props }: BoxProps) {
-  const logourl = '/img/logonew.jpg'
+  const logourl = '/img/logonew.jpg?fmt=jpg'
   return (
     <Box {...props} >
       <Flex>
