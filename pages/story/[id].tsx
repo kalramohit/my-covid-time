@@ -68,9 +68,14 @@ const buttonStyle: CSSProperties = { marginRight: '12px', marginBottom: '12px' }
 
 
 export default function StoryPage(props): JSX.Element {
+  var uid = undefined
+
+  if (props.story && props.story.data) {
+    uid = props.story.uid
+  }
   const router = useRouter()
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const url = true ? `${process.env.BASE_URL}/story/${props.story.uid}` : ''
+  const url = true ? `${process.env.BASE_URL}/story/${uid}` : ''
   const { onCopy } = useClipboard(url)
   const toast = useToast()
 

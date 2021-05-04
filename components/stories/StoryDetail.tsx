@@ -29,6 +29,7 @@ export default function StoryDetail({ story, onClose, onShare }) {
   return (
     <Box>
       <Box bgImage={`url(${story.data.thumbnail[0].url})`}
+        height="400"
         bgSize="cover"
         bgPosition="top"
         color="white">
