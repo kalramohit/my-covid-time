@@ -111,3 +111,15 @@
   .post-part ol li {
     list-style-type: decimal;
   }
+
+@media screen and (max-width: 920px) {
+      .slider-wrapper.axis-horizontal {
+	  width: 32em;
+    }
+  }
+
+@media screen and (min-width: 920px) {
+      .slider-wrapper.axis-horizontal {
+	  width: 62em;
+    }
+  }

@@ -43,7 +43,7 @@ const MainPage = ({
       <HeadTags>
         <link rel="canonical" href="https://www.mycovidtime.in" />
       </HeadTags>
-      <FeedHeader />
+      <FeedHeader />     
       <Box>
         <ContentBox>
           <Heading as="h1" size="xl"  pb={5} color="#044279">
