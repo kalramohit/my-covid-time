@@ -9,7 +9,7 @@ export default function Home() {
         <main className={landing.main}>
           <Box>
             <Heading pb={'1rem'} as="h1" size="3xl">
-              My COVID Time
+              My Covid Time
             </Heading>
             <Text fontSize="2xl">
               Stories of Inspirations, resiliance and miracles in most difficult times of Covid-19

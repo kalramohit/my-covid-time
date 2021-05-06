@@ -10,10 +10,9 @@ export default function About() {
         title="About The Project and Team"
         description="Learn about why MyCovidTime.in exists,what purpose it surves t"
       />
-      <AppCarousel />
       <ContentBox>
         <Heading as="h1" size="2xl" pb={6}>
-          About
+          About Us
         </Heading>
         
         <Box pb={6}>

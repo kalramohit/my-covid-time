@@ -11,7 +11,6 @@ export default function FAQ() {
         title="Frequently Asked Questions"
         description="View our list of Frequently Asked Questions to learn more about how the site began, moderation guidelines and how we protect your privacy."
       />
-      <AppCarousel />
 
       <ContentBox>
         <Heading as="h1" size="2xl" pb={6}>
