@@ -6,6 +6,7 @@ Current version is developed for India but can be modified easily for any other 
 
 Our stack / architecture is:
 
+- NextJS with TypeScript 
 - [NextJS](https://next.js.org/) hosted on [Vercel](https://vercel.com) (already setup here)
 - [Prisma](https://prisma.io) as our ORM (makes things pretty smooth)
 - Postgresql as a DB For Story submissions
