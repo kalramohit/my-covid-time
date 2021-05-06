@@ -35,7 +35,7 @@ export default function CreateStory() {
           You may submit your story over the email or filling up below form. In case if you would like to share images along with your story, please share the story over the email.
           <br />
           <br />
-          You can email the story at this address <strong><a cssClass="chakra-link css-1gr1s6a" href="mailto:info@mycovidtime.in">info@mycovidtime.in</a></strong>
+          You can email the story at this address <strong><a className="chakra-link css-1gr1s6a" href="mailto:info@mycovidtime.in">info@mycovidtime.in</a></strong>
         </Text>
         <Text pt={4} pb={2} >
           Please read our <span style={{ fontWeight: "bold" }}><Link href="/faq">FAQ</Link></span> for validation process.
