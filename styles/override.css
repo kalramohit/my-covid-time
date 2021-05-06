@@ -88,6 +88,7 @@
   }
   .image-label .block-quotation,
   .post-part.single .block-quotation {
+    margin-top: 10px;
     margin-bottom: 2rem;
     display: inline-block;
     font-style: italic;
