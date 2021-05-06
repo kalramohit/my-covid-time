@@ -18,11 +18,7 @@ const schema = yup.object().shape({
       !value ? true : Boolean(value.trim().split(/\s+/).length <= STORY_WORD_LIMIT)
     )
     .required('A story is required'),
-  postal: yup
-    .string()
-    .max(3, 'Postal code should be 3 characters')
-    .matches(/^[A-Za-z]\d[A-Za-z]/, 'Postal code must be letter number letter')
-    .required(),
+
   storytype: yup.string().required('Please choose a story type'),
   category: yup.string().required('Please choose a category'),
   anonymous: yup.boolean().required(),
@@ -38,22 +34,6 @@ const schema = yup.object().shape({
         ),
     }),
   contact: yup.boolean().required(),
-  contactName: yup
-    .string()
-    .max(200, 'Contact name is too long')
-    .when('contact', {
-      is: true,
-      then: yup
-        .string()
-        .required("You must include your name since you've agreed to be contacted."),
-    }),
-  email: yup.string().email('Invalid email address format'),
-  phone: yup
-    .string()
-    .test('phone is ten digits', 'Phone number must contain 10 digits', (value) =>
-      !value ? true : Boolean(value.match(/\d/g)?.length === 10)
-    ),
-  twitter: yup.string(),
   consent: yup.boolean().isTrue('You must provide your consent to continue'),
 })
 
