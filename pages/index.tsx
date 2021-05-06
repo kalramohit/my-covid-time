@@ -47,12 +47,13 @@ const MainPage = ({
       <Box>
         <ContentBox>
           <Heading as="h1" size="xl"  pb={5} color="#044279">
-            just numbers don't tell individual stories of  pain,trauma, hope, resilience and inspiration during the coronavirus pandemic.Because we believe need of the hour is to read, share and contribute stories of positivity, motivation and survivals. It is a humble endeavor to applaud the relentless efforts of the frontline staff and pay tribute to those whom we lost during the crisis.
+            Just numbers don't tell individual stories of  pain,trauma, hope, resilience and inspiration during the coronavirus pandemic. Because we believe need of the hour is to read, share and contribute stories of positivity, motivation and survivals. It is a humble endeavor to applaud the relentless efforts of the frontline staff and pay tribute to those whom we lost during the crisis.
         </Heading>
           <Box pb={6}>
             <Heading as="h2" size="l" pb={3}>
               Many stories of optimism, resilience, and hope have emerged from India during these trying times. Doctors, nurses, front line workers, leaders, volunteers, common men and many others are working round the clock to provide life-saving care to patients affected by COVID-19.
             </Heading>
+            <Text>
             <br />
                <strong>My Covid Time</strong> is a non-profit & open source project with focus on building public platform to allow common citizens to share stories of difficut time. It is an attempt to express regard and admiration for their efforts, as well as to encourage fellow citizens to keep hope and contribute to society in every way possible. 
             <br />
