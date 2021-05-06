@@ -47,7 +47,7 @@ const MainPage = ({
       <Box>
         <ContentBox>
           <Heading as="h1" size="xl"  pb={5} color="#044279">
-            Just numbers don't tell individual stories of  pain,trauma, hope, resilience and inspiration during the coronavirus pandemic. Because we believe need of the hour is to read, share and contribute stories of positivity, motivation and survivals. It is a humble endeavor to applaud the relentless efforts of the frontline staff and pay tribute to those whom we lost during the crisis.
+            When we will look back at this difficult time, just numbers won't tell individual stories of  pain,trauma, hope, resilience and inspiration during the coronavirus pandemic. It is a humble endeavor to applaud the relentless efforts of every citizen involved and tribute to those whom we lost during the crisis.
         </Heading>
           <Box pb={6}>
             <Heading as="h2" size="l" pb={3}>
