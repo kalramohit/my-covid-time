@@ -26,8 +26,8 @@ export const quoteStyles = css.global`
   @media screen and (min-width: 920px) {
     .post-part.single .block-quotation,
     .blog-main.single .block-quotation {
-      width: 130%;
-      margin: 0 -15% 2rem -15%;
+      margin-top: 10px;
+      width: 100%;
       font-size: 30px;
       padding: 0;
     }
