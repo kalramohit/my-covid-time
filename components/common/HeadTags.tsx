@@ -3,7 +3,7 @@ import Head from 'next/head'
 const defaultTitle = 'Inspiring stories of COVID-19 in India'
 const defaultDescription =
   "Stories of hope, resilience and inspiration in most difficult times of the pendemic."
-const defaultPreviewImage = generatePreviewImageUrl(`img/faith.jpg`)
+const defaultPreviewImage = 'https://images.prismic.io/sample-poc2/3476a592-0f57-4d0c-8578-7af524f0472f_faith.jpg?auto=compress,format&rect=105,0,1045,836&w=500&h=400'
 
 interface HeadTagsProps {
   title?: string
