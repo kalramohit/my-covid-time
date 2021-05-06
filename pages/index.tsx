@@ -52,7 +52,7 @@ const MainPage = ({
           <Box pb={6}>
             <Heading as="h2" size="l" pb={3}>
               Many stories of optimism, resilience, and hope have emerged from India during these trying times. Doctors, nurses, front line workers, leaders, volunteers, common men and many others are working round the clock to provide life-saving care to patients affected by COVID-19.
-              It is a humble endeavor to record al such stories and applaud the relentless efforts of every citizen involved and tribute to those whom we lost during the crisis.
+              It is a humble endeavor to record all such stories and applaud the relentless efforts of every citizen involved and tribute to those whom we lost during the crisis.
             </Heading>
             <Text>
             <br />
