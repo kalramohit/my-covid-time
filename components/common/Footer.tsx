@@ -71,7 +71,7 @@ export default function Footer() {
         >
 
         </MenuItem>
-        <div dangerouslySetInnerHTML={createTypeFormMarkup()} />;
+        <div dangerouslySetInnerHTML={createTypeFormMarkup()} />
       </Container>
     </Box>
   )
