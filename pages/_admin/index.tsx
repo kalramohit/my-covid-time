@@ -71,6 +71,7 @@ function StoryOptions({
           </Button>
           <Button
             colorScheme="blue"
+            bgColor={approved ? 'orange' : 'green'}
             type="button"
             data-id={id}
             data-type={approved ? 'unapprove' : 'approve'}
