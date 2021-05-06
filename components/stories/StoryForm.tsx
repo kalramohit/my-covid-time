@@ -203,31 +203,7 @@ export default function StoryForm() {
             )}
           </Field>
 
-          {/* Postal */}
-          <Field name="postal">
-            {({ field, form }) => (
-              <FormControl
-                pt={FIELD_PADDING}
-                pb={FIELD_PADDING}
-                isRequired
-                isInvalid={form.errors.postal && form.touched.postal}
-              >
-                <FormLabel htmlFor="postal">First 3 characters of your postal code</FormLabel>
-                <Input
-                  name={field.name}
-                  value={field.value.toUpperCase()}
-                  onChange={field.onChange}
-                  onBlur={field.onBlur}
-                  id="postal"
-                  placeholder="P6A"
-                  size="lg"
-                />
-                <FormErrorMessage>{form.errors.postal}</FormErrorMessage>
-              </FormControl>
-            )}
-          </Field>
-
-          {/* Category */}
+         {/* Category */}
           <Field name="category">
             {({ field, form }) => (
               <FormControl
