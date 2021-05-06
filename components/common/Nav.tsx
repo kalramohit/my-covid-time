@@ -58,7 +58,7 @@ const MenuLinks = ({ isOpen }: MenuLinksProps) => {
     >
       <Stack
         spacing={8}
-        align="center"
+        align="flex-start"
         justify={['center', 'space-between', 'flex-end', 'flex-end']}
         direction={['column', 'column', 'row', 'row']}
         pt={[4, 4, 0, 0]}

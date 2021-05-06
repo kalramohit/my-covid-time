@@ -20,6 +20,7 @@ export default NextAuth({
   database: process.env.DATABASE_URL,
   callbacks: {
     async signIn(user) {
+      console.log(user)
       if (process.env.MODERATOR_EMAILS.includes(user.email)) {
         return true
       }
