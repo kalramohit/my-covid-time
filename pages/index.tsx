@@ -47,7 +47,7 @@ const MainPage = ({
       <Box>
         <ContentBox>
           <Heading as="h1" size="xl"  pb={5}>
-            <span style={{color:#044279}} >
+            <span style={{color: 044279}} >
             Because we believe just numbers don't tell individual stories of  pain,trauma, hope, resilience and inspiration during the coronavirus pandemic
                          </span>
         </Heading>
