@@ -2,8 +2,8 @@ import Head from 'next/head'
 
 const defaultTitle = 'Inspiring stories of COVID-19 in India'
 const defaultDescription =
-  "Individual stories of hope, resilience and inspiration during the coronavirus pandemic."
-const defaultPreviewImage = generatePreviewImageUrl(`img/landingpage-v2.jpg`)
+  "Indian stories of hope, resilience and inspiration during the coronavirus pandemic."
+const defaultPreviewImage = generatePreviewImageUrl(`img/faith.jpg`)
 
 interface HeadTagsProps {
   title?: string
