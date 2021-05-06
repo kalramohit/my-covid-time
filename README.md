@@ -1,12 +1,17 @@
-# My Covid Story
+# [My Covid Time](https://my-covid-time.vercel.app/)
 
-This is an extremely early MVP, so there is a lot to do.
+My Covid Time is a non-profit & open source project with focus on building public platform to allow common citizens to share stories of difficut time. It is an attempt to express regard and admiration for their efforts, as well as to encourage fellow citizens to keep hope and contribute to society in every way possible.
+
+Current version is developed for India but can be modified easily for any other country.
 
 Our stack / architecture is:
 
 - [NextJS](https://next.js.org/) hosted on [Vercel](https://vercel.com) (already setup here)
 - [Prisma](https://prisma.io) as our ORM (makes things pretty smooth)
-- Postgresql as a DB (Digital Ocean, Toronto)
+- Postgresql as a DB For Story submissions
+- Prismic as headless CMS 
+- Usefathom for analytics
+- TypeForm for user feedbacks 
 
 ## Contributing
 
@@ -14,7 +19,7 @@ Our stack / architecture is:
 2. Install dependencies with `npm i`
 3. Rename `.env.template` to `.env`
 4. Get a local postgres db running - Docker is probably easiest, but local postgres would also work
-5. With Docker installed, run `docker run --name my-covid-story-dev -p 5432:5432 -e POSTGRES_PASSWORD=mycovidstory -d postgres:12.6-alpine` (this will match the DB URL string in .env)
+5. With Docker installed, run `docker run --name my-covid-time-dev -p 5432:5432 -e POSTGRES_PASSWORD=mycovidtime -d postgres:12.6-alpine` (this will match the DB URL string in .env)
 6. Run `npx prisma migrate dev --name init` to apply migrations in `prisma/migrations`.
 7. Run `npx prisma db seed --preview-feature` to see test data from `prisma/seed.ts`.
 8. Run `npm run dev` to start the app locally.
@@ -65,5 +70,3 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-[![https://vercel.com?utm_source=my-covid-story&utm_campaign=oss](./public/powered-by-vercel.svg)](https://vercel.com?utm_source=my-covid-story&utm_campaign=oss)
