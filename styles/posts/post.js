@@ -28,7 +28,7 @@ export const postStyles = css.global`
     text-decoration: underline;
   }
   .container {
-    max-width: 700px;
+    max-width: 58em;
     margin: auto;
   }
 
