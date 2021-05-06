@@ -29,20 +29,16 @@ const Thanks = () => {
         </Center>
         <VStack spacing="12px" align="left">
           <Text>
-            <strong>Thank you for submitting your story.</strong> We will amplify your story to
-            engage decision-makers and drive effective government policy with science-based
-            practices that will save lives.
+            <strong>Thank you for submitting your story.</strong> 
+            <br/>
+            We will publish your story within 24-48 hours after validating process. You may want to read our <span style={{fontWeight:"bold"}}><Link  href="/faq">FAQ</Link></span> for validation process.
           </Text>
-          <Text>It may take 24-48 hours for your story to appear on the site.</Text>
-          <Text>
-            If you selected that you are willing to be contacted by the media, they may reach out to
-            you with the contact information that you provided.
-          </Text>
+          
           <Text>
             {' '}
             If you have any questions, reach out to{' '}
-            <a style={{ fontWeight: 'bold', color: '#55099D' }} href="mailto:info@mycovidstory.ca">
-              info@mycovidstory.ca
+            <a style={{ fontWeight: 'bold', color: '#55099D' }} href="mailto:info@mycovidtime.in">
+              info@mycovidtime.in
             </a>
             .
           </Text>
@@ -53,21 +49,21 @@ const Thanks = () => {
           </Heading>
 
           <Flex flexWrap="wrap" justifyContent="center">
-            <Link href="https://twitter.com/MyCOVIDStory_CA" isExternal margin="5px">
+            <Link href="https://twitter.com/MyCOVIDTime_IN" isExternal margin="5px">
               <Button color="white" leftIcon={<TwitterSVG />}>
-                Share @MyCOVIDStory_CA
+                Share @MyCOVIDTime_In
               </Button>
             </Link>
 
-            <Link href="https://www.facebook.com/MyCovidStoryCA" isExternal margin="5px">
+            <Link href="https://www.facebook.com/MyCOVIDTime_IN" isExternal margin="5px">
               <Button color="white" leftIcon={<FacebookSVG />}>
-                Share @MyCovidStoryCA
+                Share @MyCovidTimeIN
               </Button>
             </Link>
 
-            <Link href="https://www.instagram.com/mycovidstory_ca/" isExternal margin="5px">
+            <Link href="https://www.instagram.com/MyCOVIDTime_IN/" isExternal margin="5px">
               <Button color="white" leftIcon={<InstagramSVG />}>
-                Share @mycovidstory_ca
+                Share @mycovidtime_in
               </Button>
             </Link>
           </Flex>
