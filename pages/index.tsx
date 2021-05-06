@@ -46,18 +46,18 @@ const MainPage = ({
       <FeedHeader />
       <Box>
         <ContentBox>
-          <Heading as="h1" size="xl" pb={5}>
-            Because we believe just numbers don't tell individual stories of  pain,trauma, hope, resilience and inspiration during the coronavirus pandemic
+          <Heading as="h1" size="xl"  pb={5} color="#044279">
+            When we will look back at this difficult time, just numbers won't tell individual stories of  pain,trauma, hope, resilience and inspiration during the coronavirus pandemic. 
         </Heading>
           <Box pb={6}>
             <Heading as="h2" size="l" pb={3}>
-              Doctors, nurses, front line workers, leaders, volunteers, common men and many others are working round the clock to provide life-saving care to patients affected by COVID-19.
-          </Heading>
+              Many stories of optimism, resilience, and hope have emerged from India during these trying times. Doctors, nurses, front line workers, leaders, volunteers, common men and many others are working round the clock to provide life-saving care to patients affected by COVID-19.
+              It is a humble endeavor to record all such stories and applaud the relentless efforts of every citizen involved and tribute to those whom we lost during the crisis.
+            </Heading>
             <Text>
-              In India there are many stories of hope, resilience, and inspiration displayed by the healthcare workers during pandemic. It's an attempt to show gratitude and respect for their efforts and also motivate fellow citizens to not lose hope and contribute towards the society in any way.
-            <br /><br />
-            Need of the hour is to read, share and contribute stories of positivity, motivation and survivals. It is a humble endeavor to applaud the relentless efforts of the frontline staff and pay tribute to those whom we lost during the crisis.
-
+            <br />
+               <strong>My Covid Time</strong> is a non-profit & open source project with focus on building public platform to allow common citizens to share stories of difficut time. It is an attempt to express regard and admiration for their efforts, as well as to encourage fellow citizens to keep hope and contribute to society in every way possible. 
+            <br />
           </Text>
           </Box>
         </ContentBox>
