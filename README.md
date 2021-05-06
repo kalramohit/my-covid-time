@@ -1,6 +1,6 @@
 # [My Covid Time](https://my-covid-time.vercel.app/)
 
-My Covid Time is a non-profit & open source project with focus on building public platform to allow common citizens to share stories of difficut time. It is an attempt to express regard and admiration for their efforts, as well as to encourage fellow citizens to keep hope and contribute to society in every way possible.
+My Covid Time is a non-profit & open source project with focus on building public platform to allow common citizens to share stories of difficut time of pendemic . It is an attempt to express regard and admiration for their efforts, as well as to encourage fellow citizens to keep hope and contribute to society in every way possible.
 
 Current version is developed for India but can be modified easily for any other country.
 
