@@ -96,7 +96,17 @@
   .post-part li {
     list-style-type: initial;
     margin-left: 1em;
+    margin-top: 10px;
   }
+
+  .post-part h2 {
+    font-size: large;
+  }
+
+  .post-part p {
+    padding-top: 10px;
+  }
+
   .post-part ol li {
     list-style-type: decimal;
   }
