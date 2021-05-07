@@ -51,14 +51,14 @@ function MyApp({ Component, pageProps }: MyAppProps) {
     '@type': 'Organization',
     name: 'My Covid Time',
     alternateName: 'MyCovidTime.in',
-    url: process.env.BASE_URL,
-    logo: '/img/logo.jpg',
+    url: 'www.mycovidtime.in',
+    logo: 'https://images.prismic.io/sample-poc2/aac5d3ef-a947-44e6-8277-7a5dc8b3767a_logonew.jpg?auto=compress,format&w=70&h=70',
     sameAs: [
       'https://www.facebook.com/MyCovidTime',
-      'https://twitter.com/MyCOVIDTime_IN',
-      'https://www.instagram.com/MyCovidTijme_IN/',
-      'https://github.com/my-covid-time/www',
-      'https://MyCovidTime.in',
+      'https://twitter.com/MyCOVIDTime',
+      'https://www.instagram.com/MyCovidTijme/',
+      'https://github.com/kalramohit/my-covid-time/',
+      'https://www.MyCovidTime.in',
     ],
   }
 
@@ -67,9 +67,8 @@ function MyApp({ Component, pageProps }: MyAppProps) {
       <Head>
         <link key="favicon" rel="icon" href="/favicon.ico" />
         <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content="@MyCOVIDTime_In" />
+        <meta name="twitter:creator" content="@MyCOVIDTime" />
         <meta property="og:type" content="website" />
-
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
