@@ -49,19 +49,19 @@ const Thanks = () => {
           </Heading>
 
           <Flex flexWrap="wrap" justifyContent="center">
-            <Link href="https://twitter.com/MyCOVIDTime_IN" isExternal margin="5px">
+            <Link href="https://twitter.com/MyCOVIDTime" isExternal margin="5px">
               <Button color="white" leftIcon={<TwitterSVG />}>
                 Share @MyCOVIDTime_In
               </Button>
             </Link>
 
-            <Link href="https://www.facebook.com/MyCOVIDTime_IN" isExternal margin="5px">
+            <Link href="https://www.facebook.com/MyCOVIDTime" isExternal margin="5px">
               <Button color="white" leftIcon={<FacebookSVG />}>
                 Share @MyCovidTimeIN
               </Button>
             </Link>
 
-            <Link href="https://www.instagram.com/MyCOVIDTime_IN/" isExternal margin="5px">
+            <Link href="https://www.instagram.com/MyCOVIDTime/" isExternal margin="5px">
               <Button color="white" leftIcon={<InstagramSVG />}>
                 Share @mycovidtime_in
               </Button>
