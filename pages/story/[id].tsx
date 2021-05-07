@@ -111,8 +111,9 @@ export default function StoryPage(props): JSX.Element {
   const emailSubject = 'Help me amplify this story'
   if (story && story.data) {
     const hasTitle = RichText.asText(story.data.title).length !== 0;
+    const hasDescription = RichText.asText(story.data.description).length !== 0;
     const title = hasTitle ? RichText.asText(story.data.title) : "Untitled";
-    const description = title
+    const description = hasDescription ? RichText.asText(story.data.description) : title;
     return (
       <>
         <HeadTags title={title} description={description} previewImage={story.data.thumbnail[0].url} />
