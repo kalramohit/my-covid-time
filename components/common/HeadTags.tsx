@@ -21,7 +21,7 @@ export default function HeadTags({
   description = defaultDescription,
   previewImage = defaultPreviewImage,
 }: HeadTagsProps) {
-  const generatedTitle = generateTitle(title, TITLE_SUFFIX)
+  const generatedTitle = title == defaultTitle ? generateTitle(title, TITLE_SUFFIX) : title
   const generatedDescription = generateDescription(description, DESCRIPTION_LENGTH)
   const generatedPreviewImage = previewImage
 
