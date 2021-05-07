@@ -56,7 +56,7 @@ function generateTitle(title: string, suffix: string): string {
 
 // Limits description text to maxLength
 function generateDescription(description: string, maxLength: number): string {
-  return description.slice(0, maxLength)
+  return `${description.slice(0, maxLength)} ..`
 }
 
 function generatePreviewImageUrl(path: string): string {
