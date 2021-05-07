@@ -51,8 +51,7 @@ const Thanks = () => {
           <Flex flexWrap="wrap" justifyContent="center">
             <Link href="https://twitter.com/MyCOVIDTime" isExternal margin="5px">
               <Button color="white" leftIcon={<TwitterSVG />}>
-                Share @MyCOVIDTime_In
-              </Button>
+                Share @MyCOVIDTime    </Button>
             </Link>
 
             <Link href="https://www.facebook.com/MyCOVIDTime" isExternal margin="5px">
