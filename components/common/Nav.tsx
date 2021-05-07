@@ -67,9 +67,7 @@ const MenuLinks = ({ isOpen }: MenuLinksProps) => {
         <MenuItem to="/new">Share your story</MenuItem>
         <MenuItem to="/about">About Us</MenuItem>
         <MenuItem to="/faq">FAQ</MenuItem>
-        <MenuItem to="https://kvmhxg5ojy6.typeform.com/" externalLink={true}>
-          Media
-        </MenuItem>
+        
 
         {/* Icons */}
         <MenuItem to="https://twitter.com/MyCovidTime_IN" externalLink={true}>
