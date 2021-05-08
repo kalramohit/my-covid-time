@@ -94,12 +94,13 @@ const MainPage = ({
       <FloatingRibbon>
 
         <NextLink href="/new" passHref>
-          <Link>
-            <Box style={{ backgroundColor: "" }}>
-              <Text TextAlign="center"><span><b>Share your own story</b></span> to Inspire and motivate the world with an untold story or experience during the pendemic or may share with the world how it has changed your life</Text>
-            </Box>
+          <Link >
+            <Text borderRadius="8px"
+              width="100%"
+              backgroundColor="#03193D" textAlign="center" color="#fff" paddingLeft="5px" paddingRight="5px" TextAlign="center"><span><b> Post Story</b></span></Text>
           </Link>
         </NextLink>
+        < Text TextAlign="center" paddingLeft="5px"> Tell the world your experience during the pendemic or may share with the world how it has changed your life</Text>
       </FloatingRibbon>
     </>
   )

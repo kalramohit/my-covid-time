@@ -129,10 +129,13 @@ export default function StoryPage(props): JSX.Element {
         </style>
         <FloatingRibbon>
           <NextLink href="/new" passHref>
-            <Link>
-              <Text TextAlign="center"><span><b>Click here</b></span> to Inspire and motivate the world with an untold story or experience during the pendemic or may share with the world how it has changed your life</Text>
+            <Link >
+              <Text borderRadius="8px"
+                width="100%"
+                backgroundColor="#03193D" textAlign="center" color="#fff" paddingLeft="5px" paddingRight="5px" TextAlign="center"><span><b> Post Story</b></span></Text>
             </Link>
           </NextLink>
+          < Text TextAlign="center" paddingLeft="5px"> Tell the world your experience during the pendemic or may share with the world how it has changed your life</Text>
 
           <Drawer placement="bottom" onClose={onClose} isOpen={isOpen}>
             <DrawerOverlay>

@@ -11,9 +11,9 @@ export default function FloatingRibbon({ children }: CenterProps) {
       py={4}
       px={RESPONSIVE_PADDING}
       borderTopRadius="0px"
-      color="white"
+      color="#044279"
       boxShadow="0px -4px 4px rgba(0, 0, 0, 0.1)"
-      bg="#044279"
+      bg="#fff"
     >
       {children}
     </Center>

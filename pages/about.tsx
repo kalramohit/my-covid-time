@@ -1,7 +1,9 @@
-import { Box, Heading, Stack, Text } from '@chakra-ui/react'
 import ContentBox from '../components/common/ContentBox'
 import HeadTags from '../components/common/HeadTags'
 import AppCarousel from '../components/common/banner'
+import FloatingRibbon, { Button } from '../components/common/FloatingRibbon'
+import NextLink from 'next/link'
+import {Stack, Box, Center, Flex, Heading, Link, SimpleGrid, Text } from '@chakra-ui/react'
 
 export default function About() {
   return (
@@ -52,6 +54,18 @@ export default function About() {
         </Box>
 
       </ContentBox>
+      <FloatingRibbon>
+        <NextLink href="/new" passHref>
+          <Link >
+            <Text borderRadius="8px"
+              width="100%"
+              backgroundColor="#03193D" textAlign="center" color="#fff" paddingLeft="5px" paddingRight="5px" TextAlign="center"><span><b> Post Story</b></span></Text>
+          </Link>
+        </NextLink>
+        < Text TextAlign="center" paddingLeft="5px"> Tell the world your experience during the pendemic or may share with the world how it has changed your life</Text>
+      </FloatingRibbon>
+
     </div>
+    
   )
 }
