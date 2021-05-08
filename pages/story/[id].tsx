@@ -211,7 +211,9 @@ export async function getStaticProps({ params, preview = null, previewData = {} 
     props: {
       preview,
       story
-    }
+    },
+    revalidate: 600
+
   }
 }
 
