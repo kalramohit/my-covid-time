@@ -9,22 +9,21 @@ export default function CreateStory() {
   return (
     <>
       <HeadTags
-        title="Post your story"
-        description="Let the world hear about YOUR own experience of this COVID-19 pandemic. Over the past weeks, maybe months, you have been taking action and developing many creative ideas to face these challenging times, whether by helping your community, finding innovative learning ways, keeping a positive spirit, taking care of your relatives and loved ones, and much much more.
-
-        This is an open invitation to all of you to share your stories and inspire us all:We value your privacy."
+        title="Share your experiences of these unprecedented times"
+        description="Let the world hear about YOUR own experience of this COVID-19 pandemic. Please join our effort to create an archive of experience during these difficult times."
       />
       <AppCarousel />
       <ContentBox>
         <Heading as="h1" size="lg" pb={4}>
-          Because we believe Sharing is Caring , share your COVID story
+          Share your experiences of these unprecedented times
         </Heading>
         <Text>
-          Let the world hear about YOUR own experience of this COVID-19 pandemic. Over the past weeks, maybe months, you have been taking action and developing many creative ideas to face these challenging times, whether by helping your community, finding innovative learning ways, keeping a positive spirit, taking care of your relatives and loved ones, and much much more.
+          Let the world hear about YOUR own experience of this COVID-19 pandemic.  Please join our effort to create an archive of experience during these difficult times.
+          Over the past weeks, maybe months, you have been taking action and developing many creative ideas to face these challenging times, whether by helping your community, finding innovative learning ways, keeping a positive spirit, taking care of your relatives and loved ones, and much much more.
         </Text>
         <Text>
           <br />
-          You may also share stories about  healthcare warriors, frontline workers, colleagues , neighbours, workspace or anyone who you believe has done something inspirational , motivating or shown the true leadership.
+          You may also share stories about your own experiences as common citizen or  healthcare warriors, frontline workers, colleagues , neighbours, workspace or anyone who you believe has done something inspirational , motivating or shown the true leadership.
         </Text>
         <Text fontWeight="bold" >
           <br />
