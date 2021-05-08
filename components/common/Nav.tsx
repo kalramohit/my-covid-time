@@ -15,7 +15,6 @@ import { RESPONSIVE_PADDING } from './ContentBox'
 import FacebookSVG from '../icons/FacebookSVG'
 import InstagramSVG from '../icons/InstagramSVG'
 import TwitterSVG from '../icons/TwitterSVG'
-import LogoSVG from '../icons/logo'
 
 const CloseIcon = () => (
   <svg width="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
