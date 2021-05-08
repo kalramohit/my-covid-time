@@ -12,7 +12,7 @@
     "format": "prettier --write \"{,!(node_modules)/**/}*.{js,jsx,ts,tsx}\"",
     "prepare": "husky install",
     "ts-node": "ts-node --project=tsconfig.seed.json",
-    "vercel-build": "prisma migrate deploy && next build",
+    "vercel-build": "prisma migrate deploy && next build && next-sitemap --config next-sitemap.config.js",
     "prisma:generate": "prisma generate",
     "gen:theme-typings": "chakra-cli tokens theme/index.ts",
     "postinstall": "prisma generate",
