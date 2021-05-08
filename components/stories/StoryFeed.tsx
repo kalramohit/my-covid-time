@@ -31,15 +31,15 @@ function StorySummary({ story }: StorySummaryProps) {
               color="white"
             ></Box>
             <Box>
-              <Text noOfLines="1" style={{ fontSize: ".7em" }}>Story about {story.author}</Text>
-              <Heading noOfLines="2" as="h5" style={{ fontFamily: "poppins,sans-serif", lineHeight: "1.45", fontSize: "1em", marginTop: "1em" }}>{story.title}</Heading>
-              <Text noOfLines="3" style={{ color: "#555", fontFamily: "font pt sans,sans-serif", fontSize: "1em", marginTop: "1em" }}>{story.shortdescription}</Text>
+              <Text noOfLines={1} style={{ fontSize: ".7em" }}>Story about {story.author}</Text>
+              <Heading noOfLines={2} as="h5" style={{ fontFamily: "poppins,sans-serif", lineHeight: "1.45", fontSize: "1em", marginTop: "1em" }}>{story.title}</Heading>
+              <Text noOfLines={3} style={{ color: "#555", fontFamily: "font pt sans,sans-serif", fontSize: "1em", marginTop: "1em" }}>{story.shortdescription}</Text>
             </Box>
 
           </div>
 
-        </Link>
-      </NextLink>
+        </Link >
+      </NextLink >
     </Box >
   )
 }
