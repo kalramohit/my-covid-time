@@ -6,12 +6,14 @@ import ContentBox from '../common/ContentBox'
 import Link from 'next/link'
 
 export default function Logo({ ...props }: BoxProps) {
-  const logourl = 'https://images.prismic.io/sample-poc2/aac5d3ef-a947-44e6-8277-7a5dc8b3767a_logonew.jpg?auto=compress,format&w=70&h=70'
+  const logourl = 'https://images.prismic.io/sample-poc2/97106ba2-1bee-49ff-8215-de2352d5d69e_Logo_Transparent.png?auto=compress,format'
   return (
     <Box {...props} >
       <Flex>
-        <Box className="logo-img" >
-
+        <Box height="60px" width="70px" style={{
+          backgroundImage: `url(${logourl})`,
+          backgroundSize: "cover"
+        }} >
         </Box>
         <div className="log-text" style={{ width: 350 }}>
           <Text paddingLeft="10px" paddingTop="5px" color="black" fontSize="x-large" fontWeight="bold">
