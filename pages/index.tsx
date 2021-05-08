@@ -43,24 +43,45 @@ const MainPage = ({
       <HeadTags>
         <link rel="canonical" href="https://www.mycovidtime.in" />
       </HeadTags>
-      <FeedHeader />     
+      <FeedHeader />
       <Box>
-        <ContentBox>
-          <Heading as="h1" size="xl"  pb={5} color="#044279">
-            When we will look back at this difficult time, just numbers won't tell individual stories of  pain,trauma, hope, resilience and inspiration during the coronavirus pandemic. 
+        <ContentBox style={{ paddingBottom: "0px" }}>
+          <Heading as="h1" size="l" pb={5} style={{ color: "#555", fontFamily: "font pt sans,sans-serif", lineHeight: "1.47" }}>
+            When we will look back at this difficult time, just numbers won't tell individual stories of  pain,trauma, hope, resilience and inspiration during the coronavirus pandemic.
         </Heading>
-          <Box pb={6}>
-            <Heading as="h2" size="l" pb={3}>
-              Many stories of optimism, resilience, and hope have emerged from India during these trying times. Doctors, nurses, front line workers, leaders, volunteers, common men and many others are working round the clock to provide life-saving care to patients affected by COVID-19.
-              It is a humble endeavor to record all such stories and applaud the relentless efforts of every citizen involved and tribute to those whom we lost during the crisis.
-            </Heading>
-            <Text>
-            <br />
-               <strong>My Covid Time</strong> is a non-profit & open source project with focus on building public platform to allow common citizens to share stories of difficut time. It is an attempt to express regard and admiration for their efforts, as well as to encourage fellow citizens to keep hope and contribute to society in every way possible. 
-            <br />
-          </Text>
-          </Box>
         </ContentBox>
+        <Box pb={6}>
+          <ContentBox style={{ paddingBottom: "0px", paddingTop: "0px" }}>
+            <Text size="l" pb={3} style={{ color: "#555", fontFamily: "font pt sans,sans-serif", lineHeight: "1.47" }}>
+              Many stories of optimism, resilience, and hope have emerged from India during these trying times. Doctors, nurses, front line workers, leaders, volunteers, common men and many others are working round the clock to provide life-saving care to patients affected by COVID-19.We don't want to loose stories forever.
+
+            </Text>
+          </ContentBox>
+          <Box backgroundColor="#eee" style={{ padding: "0px", margin: "0px" }}>
+            <ContentBox style={{ paddingBottom: "10px", paddingTop: "10px" }}>
+              <Heading as="h2" size="l" pb={5} color="#044279">
+                It is a humble endeavor to record all such stories and applaud the relentless efforts of every citizen involved and tribute to those whom we lost during the crisis. Please join our effort to create an archive of experience during these unprecedented times. We’re featuring new stories weekly, with the permission of contributors.
+            </Heading>
+              <Box
+                padding="2px"
+                borderRadius="8px"
+                width="200px"
+                backgroundColor="#03193D"
+                colorScheme="teal"
+                color="white"
+              >
+                <NextLink href="/new" passHref>
+                  <Link>
+                    <Text paddingLeft="5px" TextAlign="center"><span><b> Share your own story</b></span></Text>
+                  </Link>
+                </NextLink>
+              </Box>
+            </ContentBox>
+          </Box>
+
+
+        </Box>
+
         <StoryFeed storytitle="We all will always remain indebted to those who sacrificed their lives in line of duty during pandemic. Their sacrifice reflects their commitment towards humankind." storytype='Supreme Sacrifices' stories={supremesacrifiessstories} />
         <StoryFeed storytitle="We salute and appreciate the Doctors, Nurses and Care-Givers, for demonstrating courage, compassion and selflessness, unlike anything we’ve seen." storytype='Healthcare Warriors' stories={healthcarestories} />
         <StoryFeed storytitle="Your dedication, commitment and selfless service during these troubled times is humbling. You are our everyday heroes." storytype='Frontline Warriors' stories={frontlinestories} />
@@ -69,12 +90,14 @@ const MainPage = ({
         <StoryFeed storytitle="We all have gone though this tough time and have some story to tell." storytype='My Own Covid Story' stories={myowncovidstories} />
         <StoryFeed storytitle="This has changed my life forever." storytype='Life Changes Post Covid' stories={lifeaftercovidstories} />
 
-      </Box>
+      </Box >
       <FloatingRibbon>
 
         <NextLink href="/new" passHref>
           <Link>
-            <Text TextAlign="center"><span><b>Click here</b></span> to Inspire and motivate the world with an untold story or experience during the pendemic or may share with the world how it has changed your life</Text>
+            <Box style={{ backgroundColor: "" }}>
+              <Text TextAlign="center"><span><b>Share your own story</b></span> to Inspire and motivate the world with an untold story or experience during the pendemic or may share with the world how it has changed your life</Text>
+            </Box>
           </Link>
         </NextLink>
       </FloatingRibbon>
@@ -100,6 +123,7 @@ export async function getStaticProps({ preview = null, previewData = {} }) {
       id: allPosts.results[i].uid,
       url: allPosts.results[i].data.thumbnail[0].url,
       storytype: allPosts.results[i].data.storytype,
+      shortdescription: allPosts.results[i].data.description.length > 0 ? allPosts.results[i].data.description[0].text : allPosts.results[i].data.title[0].text,
       contentWarning: false,
       author: allPosts.results[i].data.author
     }

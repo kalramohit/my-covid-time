@@ -3,6 +3,7 @@ import { Story } from '@prisma/client'
 export type StoryThumnbnail = {
   id: string
   storytype: string | null
+  shortdescription: string | null
   title: string
   url: string | null
   contentWarning: boolean

@@ -10,10 +10,7 @@ export default function Logo({ ...props }: BoxProps) {
   return (
     <Box {...props} >
       <Flex>
-        <Box height="60px" width="60px" style={{
-          backgroundImage: `url(${logourl})`,
-          backgroundSize: "cover"
-        }} >
+        <Box className="logo-img" >
 
         </Box>
         <div className="log-text" style={{ width: 350 }}>

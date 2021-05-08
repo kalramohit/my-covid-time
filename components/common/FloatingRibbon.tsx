@@ -10,9 +10,10 @@ export default function FloatingRibbon({ children }: CenterProps) {
       right={0}
       py={4}
       px={RESPONSIVE_PADDING}
-      borderTopRadius="8px"
+      borderTopRadius="0px"
+      color="white"
       boxShadow="0px -4px 4px rgba(0, 0, 0, 0.1)"
-      bg="white"
+      bg="#044279"
     >
       {children}
     </Center>

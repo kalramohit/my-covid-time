@@ -15,39 +15,28 @@ function StorySummary({ story }: StorySummaryProps) {
   const href = `/story/${story.id}`
 
   return (
-    <Box as="article" position="relative" height="350px">
+    <Box as="article" position="relative" >
       <NextLink href={`${href}?back=true`} as={href}>
         <Link _hover={{ textDecoration: 'none' }}>
-          <Box
-            marginTop="15px"
-            height="350px"
-            borderRadius="8px"
-            bgImage={`url(${story.url})`}
-            bgSize="cover"
-            bgPosition="center"
-            color="white"
-          >
-            <Box layerStyle="row" layout-align="center center" p={[4, null, null, 6]} borderRadius="8px" >
 
-              <Box minHeight="100" my={[4, null, null, 6]}>
-                <Heading
-                  as="h3"
-                  fontSize="2xl"
-                  fontWeight={600}
-                  fontStyle="italic"
-                  noOfLines={3}
-                  _before={{ content: `"“"` }}
-                  _after={{ content: `"”"` }}
-                  bg="rgba(0, 0, 0, 0.5)"
-                >
-
-                  {story.title}
-                </Heading>
-              </Box>
-              <Box borderRadius="8px" noOfLines={1} marginTop="150px" textAlign="center" fontSize="large" fontStyle="italic" padding="4px" bg="rgba(0, 0, 0, 0.5)" lineHeight={1.2}>Story about {story.author}</Box>
-
+          <div
+            width="200px" style={{ padding: "10px", height: "400px", borderBottomColor: "#eee", borderBottomWidth: "1px" }}>
+            <Box
+              width="200"
+              height="200"
+              borderRadius="0px"
+              bgImage={`url(${story.url})`}
+              bgSize="cover"
+              bgPosition="center"
+              color="white"
+            ></Box>
+            <Box>
+              <Text noOfLines="1" style={{ fontSize: ".7em" }}>Story about {story.author}</Text>
+              <Heading noOfLines="2" as="h5" style={{ fontFamily: "poppins,sans-serif", lineHeight: "1.45", fontSize: "1em", marginTop: "1em" }}>{story.title}</Heading>
+              <Text noOfLines="3" style={{ color: "#555", fontFamily: "font pt sans,sans-serif", fontSize: "1em", marginTop: "1em" }}>{story.shortdescription}</Text>
             </Box>
-          </Box>
+
+          </div>
 
         </Link>
       </NextLink>
@@ -63,16 +52,16 @@ interface StoryFeedProps {
 
 export default function StoryFeed({ storytitle, storytype, stories }: StoryFeedProps) {
   return (
-    <Box>
+    <Box >
 
-      <ContentBox>
-        <Heading as="h2" mb={[6, null, 8]} color="#044279">
+      <ContentBox style={{ paddingTop: "10px", paddingBottom: "10px" }}>
+        <span style={{ color: "#044279", fontSize: "2em", fontWeight: "bold", marginBottom: "1em" }}>
           {storytype}
-        </Heading>
-        <Text>{storytitle}<br /></Text>
+        </span>
+        <Text style={{ color: "#555", fontFamily: "font pt sans,sans-serif" }}>{storytitle}</Text>
         <SimpleGrid
           as="main"
-          columns={[1, null, 2]}
+          columns={[2, null, 3]}
           spacingY={[6, null, 8]}
           spacingX={[6, null, 10, 16]}
         >
