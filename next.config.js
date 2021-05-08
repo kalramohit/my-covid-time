@@ -16,8 +16,8 @@ const moduleExports = {
     webpack5: true,
   },
   i18n: {
-    locales: ['en-CA'],
-    defaultLocale: 'en-CA',
+    locales: ['en-IN'],
+    defaultLocale: 'en-IN',
   },
   env: {
     BASE_URL: baseUrl,
