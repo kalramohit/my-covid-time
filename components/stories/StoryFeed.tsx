@@ -20,7 +20,7 @@ function StorySummary({ story }: StorySummaryProps) {
         <Link _hover={{ textDecoration: 'none' }}>
 
           <div
-            width="200px" style={{ padding: "10px", height: "400px", borderBottomColor: "#eee", borderBottomWidth: "1px" }}>
+            style={{ width: "200px", padding: "10px", height: "400px", borderBottomColor: "#eee", borderBottomWidth: "1px" }}>
             <Box
               width="200"
               height="200"
