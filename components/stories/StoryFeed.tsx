@@ -20,7 +20,7 @@ function StorySummary({ story }: StorySummaryProps) {
         <Link _hover={{ textDecoration: 'none' }}>
 
           <div
-            style={{ width: "200px", padding: "10px", height: "400px", borderBottomColor: "#eee", borderBottomWidth: "1px" }}>
+            style={{ padding: "00px", height: "450px", borderBottomColor: "#eee", borderBottomWidth: "1px" }}>
             <Box
               width="200"
               height="200"
@@ -32,8 +32,8 @@ function StorySummary({ story }: StorySummaryProps) {
             ></Box>
             <Box>
               <Text noOfLines={1} style={{ fontSize: ".7em" }}>Story about {story.author}</Text>
-              <Heading noOfLines={2} as="h5" style={{ fontFamily: "poppins,sans-serif", lineHeight: "1.45", fontSize: "1em", marginTop: "1em" }}>{story.title}</Heading>
-              <Text noOfLines={3} style={{ color: "#555", fontFamily: "font pt sans,sans-serif", fontSize: "1em", marginTop: "1em" }}>{story.shortdescription}</Text>
+              <Heading noOfLines={3} as="h5" style={{ fontFamily: "poppins,sans-serif", lineHeight: "1.45", fontSize: "1em", marginTop: "1em" }}>{story.title}</Heading>
+              <Text noOfLines={5} style={{ color: "#555", fontFamily: "font pt sans,sans-serif", fontSize: "1em", marginTop: "1em" }}>{story.shortdescription}</Text>
             </Box>
 
           </div>
@@ -58,7 +58,7 @@ export default function StoryFeed({ storytitle, storytype, stories }: StoryFeedP
         <span style={{ color: "#044279", fontSize: "2em", fontWeight: "bold", marginBottom: "1em" }}>
           {storytype}
         </span>
-        <Text style={{ color: "#555", fontFamily: "font pt sans,sans-serif" }}>{storytitle}</Text>
+        <Text style={{ color: "#555", fontFamily: "font pt sans,sans-serif", marginBottom: "1em"  }}>{storytitle}</Text>
         <SimpleGrid
           as="main"
           columns={[2, null, 3]}
