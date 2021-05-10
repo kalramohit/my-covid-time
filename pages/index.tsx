@@ -1,14 +1,11 @@
 import NextLink from 'next/link'
 import { Box, Center, Flex, Heading, Link, SimpleGrid, Text } from '@chakra-ui/react'
 import ContentBox from '../components/common/ContentBox'
-
-import { list, listwithstorytype } from '../lib/api/stories'
 import AppCarousel from '../components/common/banner'
 import StoryFeed from '../components/stories/StoryFeed'
 import FloatingRibbon, { Button } from '../components/common/FloatingRibbon'
 import SiteLayout from '../layouts/Default'
 import { StoryThumnbnail } from '../components/stories/model'
-import { Prisma, Story } from '@prisma/client'
 import { ReactNode } from 'react'
 import HeadTags from '../components/common/HeadTags'
 import Prismic from '@prismicio/client'
@@ -57,32 +54,41 @@ const MainPage = ({
 
             </Text>
           </ContentBox>
-          <Box backgroundColor="#eee" style={{ padding: "0px", margin: "0px" }}>
-            <ContentBox style={{ paddingBottom: "10px", paddingTop: "10px" }}>
-              <Heading as="h2" size="l" pb={5} color="#044279">
-                It is a humble endeavor to record all such stories and applaud the relentless efforts of every citizen involved and tribute to those whom we lost during the crisis. Please join our effort to create an archive of experience during these unprecedented times. We’re featuring new stories weekly, with the permission of contributors.
-            </Heading>
-              <Box
-                padding="2px"
-                borderRadius="8px"
-                width="200px"
-                backgroundColor="#03193D"
-                colorScheme="teal"
-                color="white"
-              >
-                <NextLink href="/new" passHref>
-                  <Link>
-                    <Text paddingLeft="5px" TextAlign="center"><span><b> Share your own story</b></span></Text>
-                  </Link>
-                </NextLink>
-              </Box>
+
+          <Box style={{ backgroundColor: "rgba(225,225, 225, 0.3)" }}>
+
+            <ContentBox style={{ paddingTop: "10px", paddingBottom: "10px", textAlign: "center" }}>
+              <span style={{ color: "#333", letterSpacing: "3.47px", textAlign: "center", fontSize: "1.5em", fontWeight: "600", marginBottom: "1em" }}>
+                OUR MISSION
+            </span>
+              <div style={{ width: "100%" }}>
+                <Text style={{ color: "#555", fontFamily: "font pt sans,sans-serif", marginBottom: "1em" }}>
+                  It is a humble endeavor to record all such stories and applaud the relentless efforts of every citizen involved and tribute to those whom we lost during the crisis. Please join our effort to create an archive of experience during these unprecedented times. We’re featuring new stories weekly, with the permission of contributors.
+                </Text>
+              </div>
+              <div style={{ width: "100%", justifyContent: "center", display: "Flex" }}>
+                <Box
+                  padding="5px"
+                  borderRadius="8px"
+                  display="Flex"
+                  colorScheme="teal"
+                  color="#fff"
+                  backgroundColor="#03193D"
+                >
+                  <NextLink href="/new" passHref>
+                    <Link>
+                      <Text paddingLeft="5px" TextAlign="center"><span><b> Share your own story</b></span></Text>
+                    </Link>
+                  </NextLink>
+                </Box>
+              </div>
             </ContentBox>
           </Box>
 
 
         </Box>
 
-        <StoryFeed storytitle="We all will always remain indebted to those who sacrificed their lives in line of duty during pandemic. Their sacrifice reflects their commitment towards humankind." storytype='Supreme Sacrifices' stories={supremesacrifiessstories} />
+        <StoryFeed storytitle="We all will always remain indebted to those who sacrificed their lives in line of duty during pandemic. Their sacrifice reflects their commitment towards humankind." storytype='SUPREMEupreme Sacrifices' stories={supremesacrifiessstories} />
         <StoryFeed storytitle="We salute and appreciate the Doctors, Nurses and Care-Givers, for demonstrating courage, compassion and selflessness, unlike anything we’ve seen." storytype='Healthcare Warriors' stories={healthcarestories} />
         <StoryFeed storytitle="Your dedication, commitment and selfless service during these troubled times is humbling. You are our everyday heroes." storytype='Frontline Warriors' stories={frontlinestories} />
         <StoryFeed storytitle="No battle is won alone! We are proud of those kind and gentle citizens who volunteered a helping hand during the unprecedented times. Every small contribution makes the world a better place." storytype='Concerned Citizens' stories={commoncitizensstories} />
@@ -92,7 +98,6 @@ const MainPage = ({
 
       </Box >
       <FloatingRibbon>
-
         <NextLink href="/new" passHref>
           <Link >
             <Text borderRadius="8px"

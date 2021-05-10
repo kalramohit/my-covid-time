@@ -1,3 +1,13 @@
+.storyarea:nth-of-type(even) {
+  background-color:rgba(225,225, 225, 0.3);
+}
+.storyarea:nth-of-type(odd) * article {
+  background-color:rgba(225,225, 225, 0.3);
+}
+.storyarea:nth-of-type(even) * article {
+  background-color:#fff
+}
+
 
   .carousel .slide {
     height: 400px !important;

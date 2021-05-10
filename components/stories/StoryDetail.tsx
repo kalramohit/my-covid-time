@@ -27,7 +27,7 @@ interface StoryDetailProps {
 
 export default function StoryDetail({ story, onClose, onShare }) {
   return (
-    <Box>
+    <Box >
       <Box bgImage={`url(${story.data.thumbnail[0].url})`}
         height="400"
         bgSize="cover"

@@ -5,6 +5,7 @@ import ContentBox from '../common/ContentBox'
 import Label from '../common/Label'
 import { Story } from '@prisma/client'
 import { StoryThumnbnail } from './model'
+import { SSL_OP_TLS_ROLLBACK_BUG } from 'node:constants'
 
 
 interface StorySummaryProps {
@@ -19,8 +20,8 @@ function StorySummary({ story }: StorySummaryProps) {
       <NextLink href={`${href}?back=true`} as={href}>
         <Link _hover={{ textDecoration: 'none' }}>
 
-          <div
-            style={{ padding: "00px", height: "450px", borderBottomColor: "#eee", borderBottomWidth: "1px" }}>
+          <div className="storybox"
+            style={{ padding: "5px", height: "450px", borderBottomColor: "#eee", borderBottomWidth: "1px" }}>
             <Box
               width="200"
               height="200"
@@ -52,18 +53,18 @@ interface StoryFeedProps {
 
 export default function StoryFeed({ storytitle, storytype, stories }: StoryFeedProps) {
   return (
-    <Box >
+    <Box className="storyarea">
 
-      <ContentBox style={{ paddingTop: "10px", paddingBottom: "10px" }}>
-        <span style={{ color: "#044279", fontSize: "2em", fontWeight: "bold", marginBottom: "1em" }}>
-          {storytype}
+      <ContentBox style={{ paddingTop: "10px", paddingBottom: "10px", textAlign: "center" }}>
+        <span style={{ color: "#333", letterSpacing: "3.47px", textAlign: "center", fontSize: "1.5em", fontWeight: "600", marginBottom: "1em" }}>
+          {storytype.toUpperCase()}
         </span>
-        <Text style={{ color: "#555", fontFamily: "font pt sans,sans-serif", marginBottom: "1em"  }}>{storytitle}</Text>
+        <Text style={{ color: "#555", fontFamily: "font pt sans,sans-serif", marginBottom: "1em" }}>{storytitle}</Text>
         <SimpleGrid
           as="main"
           columns={[2, null, 3]}
-          spacingY={[6, null, 8]}
-          spacingX={[6, null, 10, 16]}
+          spacingY={[6, null, 2]}
+          spacingX={[2, null, 10, 2]}
         >
           {stories.map((story) => (
             <StorySummary key={story.id} story={story} />
