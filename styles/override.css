@@ -7,7 +7,22 @@
 .storyarea:nth-of-type(even) * article {
   background-color:#fff
 }
+.storyareasubtext
+{
+ color: "#555";
+ font-family: "font pt sans,sans-serif";
+ margin-bottom: "1em" 
+}
 
+.storyareatitle
+{
+   color: "#333";
+    letter-spacing: "3.47px";
+    text-align: "center";
+    font-size:  "1.5em";
+    font-weight: "600";
+    margin-bottom: "1em"
+}
 
   .carousel .slide {
     height: 400px !important;

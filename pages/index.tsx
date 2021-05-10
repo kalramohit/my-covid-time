@@ -58,11 +58,11 @@ const MainPage = ({
           <Box style={{ backgroundColor: "rgba(225,225, 225, 0.3)" }}>
 
             <ContentBox style={{ paddingTop: "10px", paddingBottom: "10px", textAlign: "center" }}>
-              <span style={{ color: "#333", letterSpacing: "3.47px", textAlign: "center", fontSize: "1.5em", fontWeight: "600", marginBottom: "1em" }}>
+              <span className="storyareatitle">
                 OUR MISSION
             </span>
               <div style={{ width: "100%" }}>
-                <Text style={{ color: "#555", fontFamily: "font pt sans,sans-serif", marginBottom: "1em" }}>
+                <Text className="storyareasubtext">
                   It is a humble endeavor to record all such stories and applaud the relentless efforts of every citizen involved and tribute to those whom we lost during the crisis. Please join our effort to create an archive of experience during these unprecedented times. We’re featuring new stories weekly, with the permission of contributors.
                 </Text>
               </div>

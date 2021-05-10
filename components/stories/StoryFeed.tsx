@@ -56,10 +56,10 @@ export default function StoryFeed({ storytitle, storytype, stories }: StoryFeedP
     <Box className="storyarea">
 
       <ContentBox style={{ paddingTop: "10px", paddingBottom: "10px", textAlign: "center" }}>
-        <span style={{ color: "#333", letterSpacing: "3.47px", textAlign: "center", fontSize: "1.5em", fontWeight: "600", marginBottom: "1em" }}>
+        <span className="storyareatitle">
           {storytype.toUpperCase()}
         </span>
-        <Text style={{ color: "#555", fontFamily: "font pt sans,sans-serif", marginBottom: "1em" }}>{storytitle}</Text>
+        <Text className="storyareasubtext">{storytitle}</Text>
         <SimpleGrid
           as="main"
           columns={[2, null, 3]}
