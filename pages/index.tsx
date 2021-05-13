@@ -88,7 +88,7 @@ const MainPage = ({
 
         </Box>
 
-        <StoryFeed storytitle="We all will always remain indebted to those who sacrificed their lives in line of duty during pandemic. Their sacrifice reflects their commitment towards humankind." storytype='Supreame Sacrifices' stories={supremesacrifiessstories} />
+        <StoryFeed storytitle="We all will always remain indebted to those who sacrificed their lives in line of duty during pandemic. Their sacrifice reflects their commitment towards humankind." storytype='supreme Sacrifices' stories={supremesacrifiessstories} />
         <StoryFeed storytitle="We salute and appreciate the Doctors, Nurses and Care-Givers, for demonstrating courage, compassion and selflessness, unlike anything we’ve seen." storytype='Healthcare Warriors' stories={healthcarestories} />
         <StoryFeed storytitle="Your dedication, commitment and selfless service during these troubled times is humbling. You are our everyday heroes." storytype='Frontline Warriors' stories={frontlinestories} />
         <StoryFeed storytitle="No battle is won alone! We are proud of those kind and gentle citizens who volunteered a helping hand during the unprecedented times. Every small contribution makes the world a better place." storytype='Concerned Citizens' stories={commoncitizensstories} />
