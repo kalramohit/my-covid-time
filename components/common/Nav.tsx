@@ -70,17 +70,17 @@ const MenuLinks = ({ isOpen }: MenuLinksProps) => {
 
 
         {/* Icons */}
-        <MenuItem to="https://twitter.com/MyCovidTime_IN" externalLink={true}>
+        <MenuItem to="https://twitter.com/MyCovidTime" externalLink={true}>
           <TwitterSVG />
-          <VisuallyHidden>Twitter @MyCovidTime_IN</VisuallyHidden>
+          <VisuallyHidden>Twitter @MyCovidTime</VisuallyHidden>
         </MenuItem>
-        <MenuItem to="https://www.facebook.com/MyCovidTime_IN" externalLink={true}>
+        <MenuItem to="https://www.facebook.com/MyCovidTime" externalLink={true}>
           <FacebookSVG />
-          <VisuallyHidden>Facebook @MyCovidTime_IN</VisuallyHidden>
+          <VisuallyHidden>Facebook @MyCovidTime</VisuallyHidden>
         </MenuItem>
-        <MenuItem to="https://www.instagram.com/MyCovidTime_IN/" externalLink={true}>
+        <MenuItem to="https://www.instagram.com/MyCovidTime/" externalLink={true}>
           <InstagramSVG />
-          <VisuallyHidden>Instagram @MyCovidTime_IN</VisuallyHidden>
+          <VisuallyHidden>Instagram @MyCovidTime</VisuallyHidden>
         </MenuItem>
 
         <MenuItem to="/new">
