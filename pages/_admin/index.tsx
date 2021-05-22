@@ -85,7 +85,7 @@ function StoryOptions({
   )
 }
 
-interface _Admin {
+  interface _Admin {
   stories: Story[] | []
 }
 
