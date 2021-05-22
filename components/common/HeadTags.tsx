@@ -39,7 +39,7 @@ export default function HeadTags({
       <meta key="twitter:image" name="twitter:image" content={generatedPreviewImage} />
       {children}
 
-      <script src="https://cdn.usefathom.com/script.js" data-site="RVQXQDGO" defer></script>
+      <script src="https://cdn.usefathom.com/script.js" data-site="1RVQXQDGO" defer></script>
 
     </Head>
   )

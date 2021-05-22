@@ -1,6 +1,8 @@
 import { Box, Flex, Heading, IconButton, Stack, Text } from '@chakra-ui/react'
 import { CloseIcon } from '@chakra-ui/icons'
 import { Story } from '@prisma/client'
+import { ApplauseButton } from '../common/ApplauseButton';
+
 import {
   categoryLabel,
   storyCategoryLabel,
@@ -9,7 +11,9 @@ import {
   storyDate,
   storyParagraphs,
 } from './model'
+
 import ContentBox from '../common/ContentBox'
+
 import Label from '../common/Label'
 
 import { ContentWarningBox } from '../common/Warnings'
@@ -47,17 +51,7 @@ export default function StoryDetail({ story, onClose, onShare }) {
           >
             {story.data.title[0].text}
           </Heading>
-
           <Flex>
-            <IconButton
-              size="md"
-              variant="link"
-              colorScheme="white"
-              aria-label="Share"
-              icon={<ShareSVG />}
-              onClick={onShare}
-            />
-
             <IconButton
               size="md"
               mr={-2}
@@ -70,8 +64,19 @@ export default function StoryDetail({ story, onClose, onShare }) {
             />
           </Flex>
         </Flex>
-        <Text>      Story about {story.data.author}</Text>
+        <Text >      Story about {story.data.author}</Text>
+        <Flex style={{ marginTop: 20 }}>
+          <IconButton float="right" style={{ width: 70, height: 70, 'marginRight': '1em', 'borderRadius': '50%', 'border': '1px solid #ccc' }}
+            size="md"
+            variant="link"
+            colorScheme="white"
+            aria-label="Share"
+            icon={<ShareSVG />}
+            onClick={onShare}
 
+          />
+          <ApplauseButton />
+        </Flex>
       </ContentBox>
     </Box >
   )

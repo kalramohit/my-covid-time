@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import NextLink from 'next/link'
-
+import ClapButton from 'react-clap-button';
 import { queryRepeatableDocuments } from '../../utils/queries'
 import { Client } from "../../utils/prismicHelpers";
 import { RichText } from "prismic-reactjs";
@@ -8,6 +8,8 @@ import Head from "next/head";
 import { postStyles } from "../../styles/posts";
 import { Link, Heading, IconButton, Stack, Text } from '@chakra-ui/react'
 import { CloseIcon } from '@chakra-ui/icons'
+import ShareSVG from '../../components/icons/ShareSVG'
+import { ApplauseButton } from '../../components/common/ApplauseButton';
 
 // Project components
 import { BackButton, SliceZone } from "../../components/post";
@@ -106,6 +108,12 @@ export default function StoryPage(props): JSX.Element {
     })
   }
 
+  const onCountChange = ({ count, countTotal }) => {
+
+  };
+  const onShare = ({ count, countTotal }) => {
+
+  };
   // Get Story details
 
   const emailSubject = 'Help me amplify this story'
@@ -121,8 +129,22 @@ export default function StoryPage(props): JSX.Element {
           <StoryDetail story={story} onClose={handleClose} onShare={onOpen} />
         </Box>
         <Box margin="5">
+
           <SliceZone sliceZone={story.data.body} />
           <br />
+          <Flex style={{ marginTop: 20 }}>
+            <IconButton float="right" style={{ width: 70, height: 70, 'marginRight': '1em', 'borderRadius': '50%', 'border': '1px solid #ccc' }}
+              size="md"
+              variant="link"
+              colorScheme="white"
+              aria-label="Share"
+              icon={<ShareSVG />}
+              onClick={onOpen}
+
+            />
+
+            <ApplauseButton ></ApplauseButton>
+          </Flex>
         </Box>
         <style jsx global>
           {postStyles}
@@ -147,7 +169,7 @@ export default function StoryPage(props): JSX.Element {
                     <TwitterShareButton
                       url={url}
                       title={description}
-                      via="MyCovidTime_IN"
+                      via="MyCovidTime"
                       style={buttonStyle}
                     >
                       <TwitterIcon size={shareIconSize} />
