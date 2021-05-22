@@ -66,7 +66,6 @@ export class ApplauseButton extends Component<Props, State> {
     }
 
     private async updateClaps(claps: number, url?: string): Promise<string> {
-        claps = 5;
 
         let query = url ? `?url=${url}` : "?url=" + window.document.URL.replaceAll('https://', '').replaceAll('http://localhost:3000', 'mycovidtime.in');
         let response = await axios.post<string>(`${this.API}/update-claps${query}`,
