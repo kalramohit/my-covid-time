@@ -10,7 +10,7 @@ import { Link, Heading, IconButton, Stack, Text } from '@chakra-ui/react'
 import { CloseIcon } from '@chakra-ui/icons'
 import ShareSVG from '../../components/icons/ShareSVG'
 import { ApplauseButton } from '../../components/common/ApplauseButton';
-
+import { RecordViews } from '../../components/common/RecordViews';
 // Project components
 import { BackButton, SliceZone } from "../../components/post";
 
@@ -158,7 +158,7 @@ export default function StoryPage(props): JSX.Element {
             </Link>
           </NextLink>
           < Text TextAlign="center" paddingLeft="5px"> Tell the world your experience during the pendemic or may share with the world how it has changed your life</Text>
-
+          <RecordViews />
           <Drawer placement="bottom" onClose={onClose} isOpen={isOpen}>
             <DrawerOverlay>
               <DrawerContent>
@@ -171,6 +171,7 @@ export default function StoryPage(props): JSX.Element {
                       title={description}
                       via="MyCovidTime"
                       style={buttonStyle}
+
                     >
                       <TwitterIcon size={shareIconSize} />
                     </TwitterShareButton>

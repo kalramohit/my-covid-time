@@ -30,7 +30,15 @@ export default function Footer() {
           <MenuItem to="/faq" padding={1} marginBottom={1}>
             FAQ
           </MenuItem>
-          
+
+          <MenuItem
+            to="https://kvmhxg5ojy6.typeform.com/to/gUsoYkft"
+            externalLink={true}
+            padding={1}
+            marginBottom={1}
+          >
+            Media Form
+          </MenuItem>
           {/*<MenuItem padding={1} marginBottom={1}>Releases</MenuItem>*/}
           <MenuItem
             to="https://github.com/kalramohit/my-covid-time"
@@ -40,6 +48,7 @@ export default function Footer() {
           >
             Open Source Project
           </MenuItem>
+
           <MenuItem
             to="https://app.usefathom.com/share/RVQXQDGO/mycovidtime.in"
             externalLink={true}

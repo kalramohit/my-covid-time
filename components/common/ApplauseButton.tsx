@@ -72,7 +72,8 @@ export class ApplauseButton extends Component<Props, State> {
             JSON.stringify(`${claps},${this.VERSION}`), {
             headers: this.HEADERS
         });
-
+        window.fathom.trackGoal('B5WH3NBX', 0);
+        console.log('claps updated');
         return response.data;
     }
 
@@ -204,7 +205,7 @@ export class ApplauseButton extends Component<Props, State> {
     );
 
     componentDidUpdate() {
-        console.log('componentDidUpdate' + this.state.totalClaps);
+
     }
     private renderIcon() {
         if (!this.props.children)
