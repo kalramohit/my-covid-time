@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "prisma migrate deploy && next build",
+    "build": "next build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
@@ -12,11 +12,9 @@
     "format": "prettier --write \"{,!(node_modules)/**/}*.{js,jsx,ts,tsx}\"",
     "prepare": "husky install",
     "ts-node": "ts-node --project=tsconfig.seed.json",
-    "vercel-build": "prisma migrate deploy && next build && next-sitemap --config next-sitemap.config.js",
-    "prisma:generate": "prisma generate",
-    "gen:theme-typings": "chakra-cli tokens theme/index.ts",
-    "postinstall": "prisma generate",
-    "test": "jest"
+    "vercel-build": "next build && next-sitemap --config next-sitemap.config.js",
+     "gen:theme-typings": "chakra-cli tokens theme/index.ts",
+     "test": "jest"
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.11",
